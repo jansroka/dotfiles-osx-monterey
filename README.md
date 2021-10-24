@@ -1,7 +1,17 @@
 # dotfiles
+These are my dotfiles.
 
-# Getting started
+## Features
+- super simple setup
+- uses ansible and is idempotent
+- keeps ```~/```clean
 
+## Available ansible roles
+- brew
+	- configures homebrew includings casks
+	- needs ca. 12 mins to complete
+
+## Getting started
 You’ll need the following dependencies before getting started.
 
 - Ansible
@@ -16,12 +26,21 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install ansible
 ```
 
-# How to run
+or
+
+```
+bash ./bin/setup.sh
+
+```
+
+## How to run
 ```
 ANSIBLE_CONFIG=./ansible/ansible.cfg ansible-playbook -i ansible/hosts ansible/dotfiles.yml
 ```
 
 ## Inspiration
+- https://github.com/elnappo/dotfiles/
 - https://github.com/adamchainz/mac-ansible
 - https://github.com/TalkingQuickly/ansible-osx-setup
 - https://github.com/jcf/ansible-dotfiles
+- https://github.com/frdmn/dotfiles
