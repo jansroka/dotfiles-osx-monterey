@@ -30,8 +30,9 @@ or
 
 ```
 bash ./bin/setup.sh
-
 ```
+
+(```setup.sh``` also runs the dotfiles playbook.)
 
 ## How to run
 ```
