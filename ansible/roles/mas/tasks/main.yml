@@ -1,7 +1,8 @@
 ---
 - name: Install/Upgrade your list of Mac App Store apps
   mas:
-    name: "{{ item }}"
+    id: "{{ item }}"
+    state: latest
     upgrade_all: yes
   loop: "{{ mas_installed_apps }}"
   tags: mas
