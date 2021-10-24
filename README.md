@@ -10,6 +10,9 @@ These are my dotfiles.
 - brew
 	- configures homebrew includings casks
 	- needs ca. 12 mins to complete
+- mas
+	- takes care of apps installed via Mac App Store
+	- needs a minute max to complete
 
 ## Getting started
 You’ll need the following dependencies before getting started.
@@ -36,7 +39,7 @@ bash ./bin/setup.sh
 
 ## How to run
 ```
-ANSIBLE_CONFIG=./ansible/ansible.cfg ansible-playbook -i ansible/hosts ansible/dotfiles.yml
+time ANSIBLE_CONFIG=./ansible/ansible.cfg ansible-playbook -i ansible/hosts ansible/dotfiles.yml -v
 ```
 
 ## Inspiration
