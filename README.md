@@ -14,7 +14,7 @@ These are my dotfiles.
 	- takes care of apps installed via Mac App Store
 	- needs a minute max to complete
 - duti
-	- set default app associations via ```duti``
+	- set default app associations via ```duti```
 	- needs a few seconds to complete
 
 ## Getting started
