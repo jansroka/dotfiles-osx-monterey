@@ -1,0 +1,41 @@
+---
+# use 'duti -x jpg' to get current assocation
+# use 'duti -e avi' to get UTI declarations for extension
+# use 'duti -vs com.sublimetext.4 .c all' to figure out uti names
+duti_default_apps_associations:
+  # Sublime text
+  - bundle_id: com.sublimetext.4
+    utis:
+      - public.plain-text
+      - public.source-code
+      - .c
+      - .h
+      - .md
+
+  # VLC
+  - bundle_id: org.videolan.vlc
+    utis:
+      - .avi
+      - .mkv
+      - .mp4
+      - .mpeg
+
+  # The Unarchiver
+  - bundle_id: com.macpaw.site.theunarchiver
+    utis:
+      - .zip
+      - .rar
+      - .tar
+      - .7z
+      - .bzip2
+
+  # Preview
+  - bundle_id: com.apple.Preview
+    utis:
+      - .bmp
+      - .jpeg
+      - .jpg
+      - .pdf
+      - .png
+      - .tif
+      - .tiff

@@ -1,0 +1,7 @@
+---
+- name: Update default file type association
+  command: "duti -s {{ item.0.bundle_id }} {{ item.1 }} all"
+  with_subelements:
+    - "{{ duti_default_apps_associations }}"
+    - utis
+  tags: duti

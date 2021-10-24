@@ -3,5 +3,8 @@
 
   roles:
     - role: brew
-      tags:
-        - brew
+      tags: brew
+    - role: mas
+      tags: mas
+    - role: duti
+      tags: duti

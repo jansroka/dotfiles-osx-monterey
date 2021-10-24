@@ -13,6 +13,9 @@ These are my dotfiles.
 - mas
 	- takes care of apps installed via Mac App Store
 	- needs a minute max to complete
+- duti
+	- set default app associations via ```duti``
+	- needs a few seconds to complete
 
 ## Getting started
 You’ll need the following dependencies before getting started.
