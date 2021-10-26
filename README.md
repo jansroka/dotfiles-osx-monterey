@@ -14,8 +14,11 @@ These are my dotfiles.
 	- takes care of apps installed via Mac App Store
 	- needs a minute max to complete
 - duti
-	- set default app associations via ```duti``
+	- set default app associations via ```duti```
 	- needs a few seconds to complete
+- npm
+	- install the few global npm packages that I use
+	- only a few seconds runtime
 
 ## Getting started
 You’ll need the following dependencies before getting started.

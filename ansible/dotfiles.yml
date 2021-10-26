@@ -8,3 +8,5 @@
       tags: mas
     - role: duti
       tags: duti
+    - role: npm
+      tags: npm

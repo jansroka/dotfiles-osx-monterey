@@ -1,0 +1,9 @@
+---
+- name: Install Node Packages
+  npm: name={{ item }} state=present global=yes
+  with_items:
+    - npm
+    - yarn
+    - jshint
+    - npm-upgrade
+  tags: npm
