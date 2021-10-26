@@ -19,6 +19,9 @@ These are my dotfiles.
 - npm
 	- install the few global npm packages that I use
 	- only a few seconds runtime
+- osx
+	- set lots of defaults for OSX and OSX apps
+	- runs less than a minute
 
 ## Getting started
 You’ll need the following dependencies before getting started.
@@ -45,7 +48,7 @@ bash ./bin/setup.sh
 
 ## How to run
 ```
-time ANSIBLE_CONFIG=./ansible/ansible.cfg ansible-playbook -i ansible/hosts ansible/dotfiles.yml -v
+time ANSIBLE_CONFIG=./ansible/ansible.cfg ansible-playbook -i ansible/hosts ansible/dotfiles.yml -v --ask-become-pass
 ```
 
 ## Inspiration

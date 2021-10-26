@@ -10,3 +10,5 @@
       tags: duti
     - role: npm
       tags: npm
+    - role: osx
+      tags: osx

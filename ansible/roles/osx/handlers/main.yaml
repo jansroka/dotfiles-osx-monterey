@@ -1,0 +1,17 @@
+- name: Kill Dock
+  command: killall Dock
+  tags: osx
+
+- name: Kill Finder
+  command: killall Finder
+  tags: osx
+
+- name: Kill Safari
+  command: killall Safari
+  ignore_errors: yes
+  tags: osx
+
+- name: Kill Terminal
+  command: killall Terminal
+  ignore_errors: yes
+  tags: osx
