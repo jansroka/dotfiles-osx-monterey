@@ -15,6 +15,7 @@
 - name: "Install Homebrew casks"
   homebrew_cask:
     name: "{{ item }}"
+    greedy: yes
     state: latest
   ignore_errors: yes
   loop: "{{ cask_packages }}"
