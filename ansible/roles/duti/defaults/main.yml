@@ -8,6 +8,7 @@ duti_default_apps_associations:
     utis:
       - public.plain-text
       - public.source-code
+      - com.apple.property-list # .plist
       - .c
       - .h
       - .md
