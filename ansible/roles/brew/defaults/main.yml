@@ -8,7 +8,6 @@ brew_taps:
   - homebrew/services
 
 brew_packages:
-  - python
   - ansible
   - autoconf
   - automake
@@ -37,6 +36,8 @@ brew_packages:
   - node
   - openssh
   - postgresql
+  - pre-commit
+  - python
   - ruby-build
   - rbenv
   - rsync
