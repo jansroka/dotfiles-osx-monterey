@@ -1,3 +1,4 @@
+---
 - name: Kill Dock
   command: killall Dock
   tags: osx
@@ -8,10 +9,10 @@
 
 - name: Kill Safari
   command: killall Safari
-  ignore_errors: yes
+  ignore_errors: true
   tags: osx
 
 - name: Kill Terminal
   command: killall Terminal
-  ignore_errors: yes
+  ignore_errors: true
   tags: osx

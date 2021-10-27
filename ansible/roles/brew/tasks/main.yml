@@ -7,24 +7,24 @@
 - name: "Install Homebrew formulae"
   homebrew:
     name: "{{ item }}"
-    state: latest
-    update_homebrew: yes
-    upgrade_all: yes
+    state: present
+    update_homebrew: true
+    upgrade_all: true
   loop: "{{ brew_packages }}"
 
 - name: "Install Homebrew casks"
   homebrew_cask:
     name: "{{ item }}"
-    greedy: yes
-    state: latest
-  ignore_errors: yes
+    greedy: true
+    state: present
+  ignore_errors: true
   loop: "{{ cask_packages }}"
 
 - name: "Install QuickLook plugins"
   homebrew_cask:
     name: "{{ item }}"
     state: latest
-  ignore_errors: yes
+  ignore_errors: true
   loop: "{{ cask_ql_packages }}"
 
 - name: Cleanup brew

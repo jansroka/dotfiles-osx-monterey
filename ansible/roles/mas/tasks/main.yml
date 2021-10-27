@@ -3,6 +3,6 @@
   mas:
     id: "{{ item }}"
     state: latest
-    upgrade_all: yes
+    upgrade_all: true
   loop: "{{ mas_installed_apps }}"
   tags: mas

@@ -1,6 +1,6 @@
+---
 # Make sure you do not clash with a brew cask here!
 # Get the list of currently installed with 'mas list'.
 mas_installed_apps:
-  - 604802021 # Outline
-  - 1303222628 # Paprika Recipe Manager 3
-
+  - 604802021  # Outline
+  - 1303222628  # Paprika Recipe Manager 3
