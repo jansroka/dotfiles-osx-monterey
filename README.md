@@ -52,6 +52,9 @@ time ANSIBLE_CONFIG=./ansible/ansible.cfg ansible-playbook -i ansible/hosts ansi
 ```
 
 ## Inspiration
+- https://github.com/geerlingguy/mac-dev-playbook/
+- https://github.com/kinglouie/ansible-role-macos
+- https://github.com/fgimian/macbuild-ansible
 - https://github.com/elnappo/dotfiles/
 - https://github.com/adamchainz/mac-ansible
 - https://github.com/TalkingQuickly/ansible-osx-setup
