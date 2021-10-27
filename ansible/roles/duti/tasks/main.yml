@@ -1,7 +1,38 @@
 ---
-- name: Update default file type association
-  command: "duti -s {{ item.0.bundle_id }} {{ item.1 }} all"
+# Based on https://github.com/fgimian/macbuild-ansible/blob/master/roles/default_apps/tasks/main.yaml
+- name: Ensure duti is installed
+  homebrew:
+    name: duti
+    state: latest
+  tags: duti
+
+# check if current association is same bundle_id as expected
+# if yes, write into stdout
+# if no, keep stdout empty
+# read this into duti_output for later use
+- name: check file type association
+  shell: "duti -x {{ item.1 }} | grep {{ item.0.bundle_id }}"
   with_subelements:
     - "{{ duti_default_apps_associations }}"
     - utis
+  changed_when: false
+  failed_when: false
+  register: duti_output
+  tags: duti
+
+# if we have something in item.stdout, do nothing
+# if item.stdout is empty, set assocation
+- name: update file type association
+  shell: "duti -s {{ item.item.0.bundle_id }} {{ item.item.1 }} all"
+  with_items: "{{ duti_output.results | list }}"
+  when: item.stdout != ""
+  changed_when: item.stdout != item.item.0.bundle_id.lower()
+  tags: duti
+
+# debug print
+- name: show values
+  debug:
+    msg: "{{ item.item.0.bundle_id }} {{ item.item.1 }}"
+  with_items: "{{ duti_output.results | list }}"
+  when: item.stdout != ""
   tags: duti
