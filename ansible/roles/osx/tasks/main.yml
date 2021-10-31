@@ -215,13 +215,13 @@
   osx_defaults: domain=com.apple.dock key={{ item.key }} type={{ item.type }} value={{ item.value }}
   with_items:
     # top right corner - screensaver
-    - {key: "wvous-tr-corner", type: "int", value: "4"}
+    - {key: "wvous-tr-corner", type: "int", value: "5"}
     - {key: "wvous-tr-modifier", type: "int", value: "0"}
 
     # zero out all other corners
     - {key: "wvous-tl-corner", type: "int", value: "0"}
     - {key: "wvous-tl-modifier", type: "int", value: "0"}
-    - {key: "wvous-bl-corner", type: "int", value: "0"}
+    - {key: "wvous-bl-corner", type: "int", value: "4"}
     - {key: "wvous-bl-modifier", type: "int", value: "0"}
     - {key: "wvous-br-corner", type: "int", value: "0"}
     - {key: "wvous-br-modifier", type: "int", value: "0"}
