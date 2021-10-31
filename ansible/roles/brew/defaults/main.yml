@@ -9,6 +9,7 @@ brew_taps:
 
 brew_packages:
   - ansible
+  - ansible-lint
   - autoconf
   - automake
   - awscli
@@ -47,6 +48,7 @@ brew_packages:
   - tree
   - wget
   - wifi-password
+  - yamllint
   - zlib
   - zsh
   - heroku/brew/heroku
