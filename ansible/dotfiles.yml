@@ -13,3 +13,5 @@
       tags: npm
     - role: osx
       tags: osx
+    - role: sublime-text
+      tags: sublime-text

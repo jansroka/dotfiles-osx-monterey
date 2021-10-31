@@ -1,0 +1,22 @@
+---
+- name: Ensure sublime-text brew cask is installed
+  homebrew_cask:
+    name: sublime-text
+    greedy: true
+    state: present
+  register: result
+  tags: sublime-text
+
+# Important to understand:
+# Don't symlink into /usr/bin, this is blocked by OSX.
+# Use /usr/local/bin instead
+- name: "Ensure symlinks in bin"
+  file:
+    src: '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'
+    dest: "/usr/local/bin/{{ item }}"
+    state: link
+  become: true
+  with_items:
+    - subl
+    - sublime
+  tags: sublime-text

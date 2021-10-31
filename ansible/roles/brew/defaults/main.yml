@@ -75,6 +75,7 @@ cask_packages:
   - slack
   - sourcetree
   - spotify
+  - sublime-text
   - superduper
   - tabula
   - teamviewer
