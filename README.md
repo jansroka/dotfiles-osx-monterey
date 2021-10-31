@@ -16,12 +16,15 @@ These are my dotfiles.
 - duti
 	- set default app associations via ```duti```
 	- needs a few seconds to complete
+	- note: ```duti```seems to not properly work on Big Sur
 - npm
 	- install the few global npm packages that I use
 	- only a few seconds runtime
 - osx
 	- set lots of defaults for OSX and OSX apps
 	- runs less than a minute
+- sublime-text
+	- install viab brew cask & symlink
 
 ## Getting started
 You’ll need the following dependencies before getting started.
