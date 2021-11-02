@@ -147,6 +147,8 @@
     - {domain: "com.apple.print.PrintingPrefs", key: "Quit When Finished", type: "bool", value: "true"}
     # Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
     - {domain: "com.apple.mail", key: "AddressesIncludeNameOnPasteboard", type: "bool", value: "false"}
+    # Enable AirDrop - this is enabling Airdrop in general, it still needs to be activated per use
+    - {domain: "com.apple.NetworkBrowser", key: "DisableAirDrop", type: "bool", value: "false"}
     # Enable AirDrop over Ethernet and on unsupported Macs running Lion
     - {domain: "com.apple.NetworkBrowser", key: "BrowseAllInterfaces", type: "bool", value: "true"}
     # Automatically open a new Finder window when a volume is mounted
