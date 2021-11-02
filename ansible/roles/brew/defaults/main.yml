@@ -43,6 +43,7 @@ brew_packages:
   - rbenv
   - rsync
   - ruby
+  - shellcheck
   - ssh-copy-id
   - tidy-html5
   - tree
