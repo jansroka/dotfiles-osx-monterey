@@ -24,7 +24,7 @@ These are my dotfiles.
 	- set lots of defaults for OSX and OSX apps
 	- runs less than a minute
 - sublime-text
-	- install viab brew cask & symlink
+	- install via brew cask & symlink
 
 ## Getting started
 You’ll need the following dependencies before getting started.
