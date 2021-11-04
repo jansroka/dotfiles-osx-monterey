@@ -8,7 +8,7 @@ These are my dotfiles.
 
 ## Available ansible roles
 - brew
-	- configures homebrew includings casks (runtime: 12 mins)
+	- configures homebrew includings casks (runtime: a few minutes)
 - mas
 	- takes care of apps installed via Mac App Store (runtime: 1 min)
 - duti
