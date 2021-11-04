@@ -8,23 +8,17 @@ These are my dotfiles.
 
 ## Available ansible roles
 - brew
-	- configures homebrew includings casks
-	- needs ca. 12 mins to complete
+	- configures homebrew includings casks (runtime: 12 mins)
 - mas
-	- takes care of apps installed via Mac App Store
-	- needs a minute max to complete
+	- takes care of apps installed via Mac App Store (runtime: 1 min)
 - duti
-	- set default app associations via ```duti```
-	- needs a few seconds to complete
-	- note: ```duti```seems to not properly work on Big Sur
+	- set default app associations via ```duti``` (runtime: < 1 min)
 - npm
-	- install the few global npm packages that I use
-	- only a few seconds runtime
+	- install the few global npm packages that I use (runtime: a few secs)
 - osx
-	- set lots of defaults for OSX and OSX apps
-	- runs less than a minute
+	- set lots of defaults for OSX and OSX apps (runtime: < 1 min)
 - sublime-text
-	- install via brew cask & symlink
+	- install via brew cask & symlink (runtime:  < 1 min)
 
 ## Getting started
 You’ll need the following dependencies before getting started.
