@@ -14,6 +14,8 @@
     - {key: "ShowStatusBar", type: "bool", value: "false"}
     # Show path bar
     - {key: "ShowPathbar", type: "bool", value: "true"}
+    # Show "Quit Finder" in menu
+    - {key: "QuitMenuItem", type: "bool", value: "true"}
     # Allow text selection in Quick Look
     - {key: "QLEnableTextSelection", type: "bool", value: "true"}
     # Display full POSIX path as Finder window title
