@@ -1,0 +1,28 @@
+---
+# Ruzn ```pre-commit autoupdate``` to bump the rev's.
+# By default, this will bring the hooks to the latest tag on the default branch.
+repos:
+  - repo: https://github.com/ansible/ansible-lint.git
+    rev: v5.2.1
+    hooks:
+      - id: ansible-lint
+        entry: ansible-lint --nocolor -v -x risky-shell-pipe,package-latest,no-changed-when,experimental,empty-string-compare,command-instead-of-shell
+        files: \.(yaml|yml)$
+        language: python
+        always_run: true
+        pass_filenames: false
+        # do not add file filters here as ansible-lint does not give reliable
+        # results when called with individual files.
+        # https://github.com/ansible/ansible-lint/issues/611
+        verbose: true
+        additional_dependencies:
+          - ansible-core
+          - yamllint
+
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.26.3
+    hooks:
+      - id: yamllint
+        files: \.(yaml|yml)$
+        types: [file, yaml]
+        entry: yamllint
