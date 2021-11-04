@@ -1,0 +1,15 @@
+---
+symlinks_files_src_dir: "~/Code/Private/dotfiles/ansible/roles/symlinks/files"
+
+symlinks:
+  # wget
+  - {src: "wget-hsts", dest: "~/.wget-hsts"}
+  # git
+  - {src: "git/gitconfig", dest: "~/.gitconfig"}
+  - {src: "git/gitflow_export", dest: "~/.gitflow_export"}
+  - {src: "git/gitignore_global", dest: "~/.gitignore_global"}
+  # bash
+  - {src: "bash/aliases", dest: "~/.aliases"}
+  - {src: "bash/bash_profile", dest: "~/.bash_profile"}
+  - {src: "bash/bashrc", dest: "~/.bashrc"}
+  - {src: "bash/exports", dest: "~/.exports"}

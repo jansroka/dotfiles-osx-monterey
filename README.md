@@ -19,6 +19,8 @@ These are my dotfiles.
 	- set lots of defaults for OSX and OSX apps (runtime: < 1 min)
 - sublime-text
 	- install via brew cask & symlink (runtime:  < 1 min)
+- symlinks
+	- softlink a bunch of config files in to ```~/```(runtime: seconds)
 
 ## Getting started
 You’ll need the following dependencies before getting started.

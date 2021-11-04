@@ -15,3 +15,5 @@
       tags: osx
     - role: sublimetext
       tags: sublimetext
+    - role: symlinks
+      tags: symlinks
