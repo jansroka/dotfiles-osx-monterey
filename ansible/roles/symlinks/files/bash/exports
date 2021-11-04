@@ -1,26 +1,30 @@
 #!/usr/bin/env bash
 
+# show current dir in iTerm tab title
+# source: https://gist.github.com/phette23/5270658
+if [ "$ITERM_SESSION_ID" ]; then
+  export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"; ':"$PROMPT_COMMAND";
+fi
+
+# prompt
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
 export CLICOLOR=1
+
+# ls
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
 # brew related
 export HOMEBREW_CASK_OPTS="--appdir=/Applications --fontdir=/Library/Fonts --qlplugindir=/Library/QuickLook"
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_INSECURE_REDIRECT=1
+# shellcheck disable=SC2155
+export PATH=$(brew --prefix)/bin:$(brew --prefix)/sbin:$PATH
+# path for Homebrew coreutils$(brew --prefix coreutils)/libexec/gnubin
+# shellcheck disable=SC2155
+export PATH=$(brew --prefix coreutils)/libexec/gnubin:${PATH}
 
 # Make nano the default editor.
 export EDITOR='nano';
-
-# Enable persistent REPL history for `node`.
-export NODE_REPL_HISTORY=~/.node_history;
-# Allow 32³ entries; the default is 1000.
-export NODE_REPL_HISTORY_SIZE='32768';
-# Use sloppy mode by default, matching web browsers.
-export NODE_REPL_MODE='sloppy';
-
-# Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
-export PYTHONIOENCODING='UTF-8';
 
 # Increase Bash history size. Allow 32³ entries; the default is 500.
 export HISTSIZE='32768';
@@ -33,14 +37,30 @@ export LANG='en_US.UTF-8';
 export LC_ALL='en_US.UTF-8';
 export LC_CTYPE=en_US.UTF-8;
 
-# Highlight section titles in manual pages.
-export LESS_TERMCAP_md="${yellow}";
-
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
 
-# Need for ruby
+# ruby
 export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include"
 export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
+export PATH=/usr/local/opt/ruby/bin:$PATH
+export PATH=/Users/jan/.rbenv/shims:$PATH
 
+#python
+# Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
+export PYTHONIOENCODING='UTF-8';
+export PATH=/usr/local/share/python:$PATH
+export PATH=/Users/jan/Library/Python/3.9/lib/python/site-packages:$PATH
+
+# Add `~/bin` to the `$PATH`
+export PATH=${HOME}/bin:/usr/local/sbin:${PATH}
+
+# node
+# Enable persistent REPL history for `node`.
+export NODE_REPL_HISTORY=~/.node_history;
+# Allow 32³ entries; the default is 1000.
+export NODE_REPL_HISTORY_SIZE='32768';
+# Use sloppy mode by default, matching web browsers.
+export NODE_REPL_MODE='sloppy';
+export PATH="/usr/local/opt/node@14/bin/node:$PATH"
