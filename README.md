@@ -54,6 +54,12 @@ bash ./bin/setup.sh
 time ANSIBLE_CONFIG=./ansible/ansible.cfg ansible-playbook -i ansible/hosts ansible/dotfiles.yml -v --ask-become-pass
 ```
 
+## How to make changes to this repo // pre-commit hooks
+I am using ```pre-commit```in this repo to lint before commits. Install it via brew using
+```
+brew install pre-commit
+```
+
 ## Inspiration
 - https://github.com/geerlingguy/mac-dev-playbook/
 - https://github.com/kinglouie/ansible-role-macos
