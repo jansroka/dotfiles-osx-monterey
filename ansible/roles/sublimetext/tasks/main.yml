@@ -5,7 +5,7 @@
     greedy: true
     state: present
   register: result
-  tags: sublime-text
+  tags: sublimetext
 
 # Important to understand:
 # Don't symlink into /usr/bin, this is blocked by OSX.
@@ -19,4 +19,4 @@
   with_items:
     - subl
     - sublime
-  tags: sublime-text
+  tags: sublimetext
