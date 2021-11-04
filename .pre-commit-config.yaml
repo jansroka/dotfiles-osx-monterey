@@ -6,7 +6,7 @@ repos:
     rev: v5.2.1
     hooks:
       - id: ansible-lint
-        entry: ansible-lint --nocolor -v -x risky-shell-pipe,package-latest,no-changed-when,experimental,empty-string-compare,command-instead-of-shell
+        entry: ansible-lint --nocolor -x risky-shell-pipe,package-latest,no-changed-when,experimental,empty-string-compare,command-instead-of-shell
         files: \.(yaml|yml)$
         language: python
         always_run: true
@@ -14,7 +14,6 @@ repos:
         # do not add file filters here as ansible-lint does not give reliable
         # results when called with individual files.
         # https://github.com/ansible/ansible-lint/issues/611
-        verbose: true
         additional_dependencies:
           - ansible-core
           - yamllint
