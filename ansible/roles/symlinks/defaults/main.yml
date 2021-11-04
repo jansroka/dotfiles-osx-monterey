@@ -3,7 +3,7 @@ symlinks_files_src_dir: "~/Code/Private/dotfiles/ansible/roles/symlinks/files"
 
 symlinks:
   # wget
-  - {src: "wget-hsts", dest: "~/.wget-hsts"}
+  - {src: "wget/wget-hsts", dest: "~/.wget-hsts"}
   # git
   - {src: "git/gitconfig", dest: "~/.gitconfig"}
   - {src: "git/gitflow_export", dest: "~/.gitflow_export"}
