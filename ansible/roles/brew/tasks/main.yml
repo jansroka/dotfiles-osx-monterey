@@ -1,31 +1,61 @@
 ---
-- name: "Configure Homebrew taps"
+- name: Configure Homebrew taps
   homebrew_tap:
     name: "{{ item }}"
   loop: "{{ brew_taps }}"
+  tags: brew
 
-- name: "Install Homebrew formulae"
+- name: Get list of already installed Homebrew formulae
+  shell: "brew leaves"
+  register: brew_output
+  tags: brew
+
+# - debug:
+#    var: brew_output
+#  tags: brew
+
+- name: Install Homebrew formulae (skip if already installed)
   homebrew:
     name: "{{ item }}"
     state: present
-    update_homebrew: true
-    upgrade_all: true
   loop: "{{ brew_packages }}"
+  when: item not in brew_output.stdout
+  tags: brew
 
-- name: "Install Homebrew casks"
+- name: Get list of already installed Homebrew casks
+  shell: "brew list --cask"
+  register: cask_output
+  tags: brew
+
+# - debug:
+#    var: cask_output
+#  tags: brew
+
+- name: Install Homebrew casks (skip if already installed)
   homebrew_cask:
     name: "{{ item }}"
     greedy: true
     state: present
   ignore_errors: true
   loop: "{{ cask_packages }}"
+  when: item not in cask_output.stdout
+  tags: brew
 
-- name: "Install QuickLook plugins"
+- name: Install QuickLook plugins (skip if already installed)
   homebrew_cask:
     name: "{{ item }}"
     state: latest
   ignore_errors: true
+  when: item not in cask_output.stdout
   loop: "{{ cask_ql_packages }}"
+  tags: brew
+
+- name: Update & upgrade
+  homebrew:
+    update_homebrew: true
+    upgrade_all: true
+  tags: brew
 
 - name: Cleanup brew
   command: brew cleanup
+  tags: brew
