@@ -1,0 +1,4 @@
+---
+- name: Kill Finder
+  command: killall Finder
+  tags: osx

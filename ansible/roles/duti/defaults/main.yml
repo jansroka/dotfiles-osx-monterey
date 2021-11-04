@@ -2,23 +2,20 @@
 # use 'duti -x jpg' to get current assocation
 # use 'duti -e avi' to get UTI declarations for extension
 # use 'duti -vs com.sublimetext.4 .c all' to figure out uti names
+
 # use 'lsappinfo | grep 'bundleID="' | cut -d'"' -f2 | sort | uniq'
 #   to get a list of all bundle_id's on your system
+
+# use 'mdls -name kMDItemContentType -name kMDItemContentTypeTree -name kMDItemKind <existingfile>'
+# to get current uti
 duti_default_apps_associations:
   # Sublime text
   - bundle_id: com.sublimetext.4
     utis:
-      - public.plain-text
       - public.source-code
-      - com.apple.property-list  # .plist
       - public.json
-      - public.python-script
-      - public.shell-script
       - public.text
-      - public.unix-executable
-      - .c
-      - .h
-      - .md
+      - public.yaml
 
   # VLC
   - bundle_id: org.videolan.vlc
@@ -31,9 +28,9 @@ duti_default_apps_associations:
   # The Unarchiver
   - bundle_id: com.macpaw.site.theunarchiver
     utis:
-      - .zip
+      # - .zip  # we can't use zip, it's protected by OSX
       - .rar
-      - .tar
+      # - .tar  # we can't use zip, it's protected by OSX
       - .7z
       - .bzip2
 

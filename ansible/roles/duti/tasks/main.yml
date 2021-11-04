@@ -15,24 +15,23 @@
   with_subelements:
     - "{{ duti_default_apps_associations }}"
     - utis
-  changed_when: false
-  failed_when: false
   register: duti_output
+  changed_when: duti_output.rc == 1
+  failed_when: "'Failed to get default application' in duti_output.stderr"
   tags: duti
+
+# - debug:
+#    var: duti_output
+#  tags: duti
 
 # if we have something in item.stdout, do nothing
 # if item.stdout is empty, set assocation
 - name: update file type association
   shell: "duti -s {{ item.item.0.bundle_id }} {{ item.item.1 }} all"
   with_items: "{{ duti_output.results | list }}"
-  when: item.stdout != ""
-  changed_when: item.stdout != item.item.0.bundle_id.lower()
-  tags: duti
-
-# debug print
-- name: show values
-  debug:
-    msg: "{{ item.item.0.bundle_id }} {{ item.item.1 }}"
-  with_items: "{{ duti_output.results | list }}"
-  when: item.stdout != ""
+  # only do this when our check in the previous task resulted in an
+  # error, meaning that the association is not what we expected
+  when: item.rc == 1
+  notify:
+    - Kill Finder
   tags: duti
