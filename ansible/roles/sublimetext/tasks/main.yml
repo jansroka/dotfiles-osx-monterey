@@ -7,6 +7,16 @@
   register: result
   tags: sublimetext
 
+# Symlink
+- name: Symlink Sublime Text User Packages+Prefs
+  file:
+    src: "/Users/jan/Code/Private/dotfiles/ansible/roles/sublimetext/files/User/"
+    dest: "/Users/jan/Library/Application Support/Sublime Text/Packages/User"
+    state: link
+    force: true
+    follow: false
+  tags: sublimetext
+
 # Important to understand:
 # Don't symlink into /usr/bin, this is blocked by OSX.
 # Use /usr/local/bin instead

@@ -1,0 +1,30 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"Ansible",
+		"ApplySyntax",
+		"BracketHighlighter",
+		"GitGutter",
+		"HTML-CSS-JS Prettify",
+		"Markdown Extended",
+		"MarkdownLivePreview",
+		"Monokai Extended",
+		"Package Control",
+		"Pretty JSON",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-contrib-ansible-lint",
+		"SublimeLinter-contrib-yamllint",
+		"SublimeLinter-csslint",
+		"SublimeLinter-html-tidy",
+		"SublimeLinter-jshint",
+		"SublimeLinter-json",
+		"SublimeLinter-shellcheck",
+		"SyncedSideBar",
+	],
+}

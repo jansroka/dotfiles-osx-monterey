@@ -1,0 +1,67 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
+{
+  // minimap
+  "draw_minimap_border": true,
+  "always_show_minimap_viewport": true,
+
+  "auto_find_in_selection": true,
+  "bold_folder_labels": true,
+  //indent
+  "detect_indentation": true,
+  "auto_indent": true,
+  "smart_indent": true,
+
+  "font_size": 14,
+  "tab_size": 4,
+
+// folder_exclude_patterns and file_exclude_patterns control which files
+  // are listed in folders on the side bar. These can also be set on a per-
+  // project basis.
+  "folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", ".Trash", ".Trash-*"],
+  "file_exclude_patterns": ["*.pyc", "*.pyo", "*.exe", "*.dll", "*.obj","*.o", "*.a", "*.lib", "*.so", "*.dylib", "*.ncb", "*.sdf", "*.suo", "*.pdb", "*.idb", ".DS_Store", ".directory", "desktop.ini", "*.class", "*.psd", "*.db", "*.sublime-workspace", "*.sublime-project", "*.xlsx"],
+  // These files will still show up in the side bar, but won't be included in
+  // Goto Anything or Find in Files
+  "binary_file_patterns": ["*.jpg", "*.jpeg", "*.png", "*.gif", "*.ttf", "*.tga", "*.dds", "*.ico", "*.eot", "*.pdf", "*.swf", "*.jar", "*.zip"],
+
+  // open behaviour
+  "open_files_in_new_window": "finder_only",
+
+  //highlight
+  "highlight_line": true,
+  "highlight_modified_tabs": true,
+  "highlight_line_number": true,
+
+  "close_windows_when_empty": true,
+  "trim_trailing_white_space_on_save": true,
+  "word_wrap": true,
+    // Display the toggle sidebar button in the status bar
+  "show_sidebar_button": true,
+
+  "ignored_packages":
+  [
+    "Vintage",
+  ],
+  "indent_guide_options":
+  [
+    "draw_normal",
+    "draw_active"
+  ],
+  "line_padding_bottom": 3,
+  "line_padding_top": 3,
+  "match_brackets_angle": true,
+  "overlay_scroll_bars": "enabled",
+  //caret
+  "wide_caret": true,
+  "caret_style": "wide",
+
+  //theme relevant
+  "color_scheme": "Packages/Monokai Extended/Monokai Extended Bright.tmTheme",
+  "theme": "Default.sublime-theme",
+
+  /*"always_show_minimap_viewport" : true,*/
+  "font_options": [
+    "gray_antialias",
+    "subpixel_antialias"
+  ],
+  }
