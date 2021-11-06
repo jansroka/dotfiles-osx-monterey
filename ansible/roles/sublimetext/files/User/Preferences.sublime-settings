@@ -61,4 +61,7 @@
         "gray_antialias",
         "subpixel_antialias"
     ],
+
+    // package "Monokai++"
+    "color_scheme": "Packages/Monokai Extended/Monokai Extended Bright.tmTheme",
 }

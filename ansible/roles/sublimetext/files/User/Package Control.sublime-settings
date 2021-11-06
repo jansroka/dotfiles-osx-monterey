@@ -14,6 +14,7 @@
 		"Markdown Extended",
 		"MarkdownLivePreview",
 		"Monokai Extended",
+		"Monokai++",
 		"Package Control",
 		"Pretty JSON",
 		"SideBarEnhancements",
@@ -26,5 +27,6 @@
 		"SublimeLinter-json",
 		"SublimeLinter-shellcheck",
 		"SyncedSideBar",
+		"TrailingSpaces",
 	],
 }
