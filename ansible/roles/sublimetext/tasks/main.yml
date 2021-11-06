@@ -7,10 +7,19 @@
   register: result
   tags: sublimetext
 
-- name: Remove symlink
+- name: Remove Packages folder
   file:
-    path: "/Users/jan/Library/Application Support/Sublime Text/Packages/User"
-    state: absent
+    path: "/Users/jan/Library/Application Support/Sublime Text/Packages/"
+    state: "{{ item }}"
+  with_items:
+    - absent
+    - directory
+  tags: sublimetext
+
+- name: Re-add Packages folder
+  file:
+    path: "/Users/jan/Library/Application Support/Sublime Text/Packages/"
+    state: directory
   tags: sublimetext
 
 # Symlink
