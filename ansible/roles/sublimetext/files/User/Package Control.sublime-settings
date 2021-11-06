@@ -2,6 +2,7 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
+		"Pretty JSON",
 	],
 	"installed_packages":
 	[
