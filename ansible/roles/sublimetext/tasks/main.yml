@@ -7,6 +7,12 @@
   register: result
   tags: sublimetext
 
+- name: Remove symlink
+  file:
+    path: "/Users/jan/Library/Application Support/Sublime Text/Packages/User"
+    state: absent
+  tags: sublimetext
+
 # Symlink
 - name: Symlink Sublime Text User Packages+Prefs
   file:
