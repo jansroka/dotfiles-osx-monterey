@@ -94,7 +94,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>269 112 796 486 0 0 3440 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2786 239 570 1053 0 0 3440 1415 </string>
+	<string>213 95 570 780 0 0 1440 875 </string>
 	<key>NeverWarnAboutShortLivedSessions_331C8B66-6F93-49B6-860E-24E405905297</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_331C8B66-6F93-49B6-860E-24E405905297_selection</key>
@@ -1395,9 +1395,9 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {3440, 1440}}</string>
+		<string>{{0, 0}, {1440, 900}}</string>
 		<key>topLeft</key>
-		<string>{1075, 1335}</string>
+		<string>{261, 708}</string>
 	</dict>
 	<key>NoSyncHaveUsedCopyMode</key>
 	<true/>
@@ -1406,7 +1406,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>138F3E3B-17AD-4CFD-946E-9906D8D9185C</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>562</integer>
+	<integer>623</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
