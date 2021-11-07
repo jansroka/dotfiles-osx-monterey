@@ -13,6 +13,8 @@ These are my dotfiles.
 	- takes care of apps installed via Mac App Store (runtime: 1 min)
 - duti
 	- set default app associations via ```duti``` (runtime: < 1 min)
+- iterm
+	- ensure our own preferences file is used (runtime: seconds)
 - npm
 	- install the few global npm packages that I use (runtime: a few secs)
 - osx

@@ -9,6 +9,8 @@
       tags: mas
     - role: duti
       tags: duti
+    - role: iterm
+      tags: iterm
     - role: npm
       tags: npm
     - role: osx
