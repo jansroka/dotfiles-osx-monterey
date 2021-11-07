@@ -9,12 +9,12 @@ These are my dotfiles.
 ## Available ansible roles
 - brew
 	- configures homebrew includings casks (runtime: a few minutes)
-- mas
-	- takes care of apps installed via Mac App Store (runtime: 1 min)
 - duti
 	- set default app associations via ```duti``` (runtime: < 1 min)
 - iterm
 	- ensure our own preferences file is used (runtime: seconds)
+- mas
+	- takes care of apps installed via Mac App Store (runtime: 1 min)
 - npm
 	- install the few global npm packages that I use (runtime: a few secs)
 - osx
