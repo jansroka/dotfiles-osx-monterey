@@ -59,6 +59,7 @@ brew install pre-commit
 ```
 
 ## Inspiration
+- https://github.com/soehlert/osx-ansible
 - https://github.com/geerlingguy/mac-dev-playbook/
 - https://github.com/kinglouie/ansible-role-macos
 - https://github.com/fgimian/macbuild-ansible
