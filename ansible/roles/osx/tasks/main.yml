@@ -1,4 +1,7 @@
 ---
+- name: include base tasks
+  include: base.yml
+
 # Heavily copied & inspired by https://github.com/elnappo/dotfiles/blob/master/ansible/tasks/macos_defaults.yml
 - name: Set Finder settings
   osx_defaults: domain=com.apple.finder key={{ item.key }} type={{ item.type }} value={{ item.value }}
