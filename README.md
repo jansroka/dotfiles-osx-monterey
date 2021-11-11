@@ -15,6 +15,8 @@ These are my dotfiles.
 	- ensure our own preferences file is used (runtime: seconds)
 - mas
 	- takes care of apps installed via Mac App Store (runtime: 1 min)
+- microsoft
+	- installs Microsoft Office incl. OneDrive, Teams, Remote Desktop (runtime: a few mins)
 - npm
 	- install the few global npm packages that I use (runtime: a few secs)
 - osx

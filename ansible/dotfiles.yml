@@ -11,6 +11,8 @@
       tags: duti
     - role: iterm
       tags: iterm
+    - role: microsoft
+      tags: microsoft
     - role: npm
       tags: npm
     - role: osx
