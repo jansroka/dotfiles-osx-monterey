@@ -5,6 +5,7 @@
     "draw_minimap_border": true,
     "always_show_minimap_viewport": true,
 
+    "auto_complete_commit_on_tab": true,
     "auto_find_in_selection": true,
     "bold_folder_labels": true,
     //indent
@@ -12,8 +13,10 @@
     "auto_indent": true,
     "smart_indent": true,
 
+    // how stuff looks
     "font_size": 14,
     "tab_size": 4,
+    /*"bold_folder_labels": true,*/
 
     // folder_exclude_patterns and file_exclude_patterns control which files
     // are listed in folders on the side bar. These can also be set on a per-
@@ -34,6 +37,7 @@
 
     "close_windows_when_empty": true,
     "trim_trailing_white_space_on_save": true,
+    "ensure_newline_at_eof_on_save": true,
     "word_wrap": true,
     // Display the toggle sidebar button in the status bar
     "show_sidebar_button": true,
