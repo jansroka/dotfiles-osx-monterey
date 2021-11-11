@@ -3,7 +3,6 @@ brew_taps:
   - heroku/brew
   - homebrew/bundle
   - homebrew/cask
-  - homebrew/cask-versions
   - homebrew/core
   - homebrew/services
 
@@ -68,6 +67,10 @@ cask_packages:
   - kindle
   - launchcontrol
   - maccy
+  - microsoft-office
+  - microsoft-auto-update
+  - microsoft-teams
+  - microsoft-remote-desktop
   - ngrok
   - omnifocus
   - omniplan
