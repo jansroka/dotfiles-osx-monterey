@@ -22,6 +22,16 @@ if [[ ! -x /usr/local/bin/ansible ]]; then
     brew install ansible
 fi
 
+# check if we need to clone dotfiles
+if [[ ! -d ~/Code/Private/dotfiles/ ]]; then
+    echo "[i] Cloning dotfiles directory"
+    git clone https://github.com/jansroka/dotfiles.git ~/Code/Private/dotfiles/
+fi
+
+cd ~/Code/Private/dotfiles/
+echo "[i] Git pull'ing dotfiles repo from Github"
+git pull origin master
+
 # Run main playbook
 echo "[i] Run Playbook"
 ANSIBLE_CONFIG=./ansible/ansible.cfg ansible-playbook -i ansible/hosts ansible/dotfiles.yml -v
