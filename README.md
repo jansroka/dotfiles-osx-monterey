@@ -41,15 +41,14 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install ansible
 ```
 
-or
-
+## How to run with a one-liner
+Run this from your home dir.
 ```
-bash ./bin/setup.sh
+curl -L https://raw.github.com/jansroka/dotfiles/master/bin/setup.sh | bash
 ```
+Make sure to read the code before running.
 
-(```setup.sh``` also runs the dotfiles playbook.)
-
-## How to run
+## How to run with options
 ```
 time ANSIBLE_CONFIG=./ansible/ansible.cfg ansible-playbook -i ansible/hosts ansible/dotfiles.yml -v --ask-become-pass
 ```
