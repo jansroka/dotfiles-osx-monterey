@@ -28,7 +28,7 @@
     "binary_file_patterns": ["*.jpg", "*.jpeg", "*.png", "*.gif", "*.ttf", "*.tga", "*.dds", "*.ico", "*.eot", "*.pdf", "*.swf", "*.jar", "*.zip"],
 
     // open behaviour
-    "open_files_in_new_window": "finder_only",
+//    "open_files_in_new_window": "finder_only",
 
     //highlight
     "highlight_line": true,
