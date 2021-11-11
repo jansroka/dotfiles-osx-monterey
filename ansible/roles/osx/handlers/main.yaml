@@ -1,4 +1,8 @@
 ---
+- name: Kill Transmission
+  command: killall Transmission
+  tags: osx
+
 - name: Kill Dock
   command: killall Dock
   tags: osx
