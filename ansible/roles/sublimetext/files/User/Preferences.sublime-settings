@@ -1,50 +1,15 @@
 // Settings in here override those in "Default/Preferences.sublime-settings",
 // and are overridden in turn by syntax-specific settings.
 {
-    // minimap
-    "draw_minimap_border": true,
-    "always_show_minimap_viewport": true,
 
-    "auto_complete_commit_on_tab": true,
-    "auto_find_in_selection": true,
-    "bold_folder_labels": true,
-    //indent
-    "detect_indentation": true,
-    "auto_indent": true,
-    "smart_indent": true,
+    // package "Monokai++"
+    "color_scheme": "Packages/Monokai Extended/Monokai Extended Bright.tmTheme",
 
     // how stuff looks
     "font_size": 14,
     "tab_size": 4,
-    /*"bold_folder_labels": true,*/
+    "bold_folder_labels": true,
 
-    // folder_exclude_patterns and file_exclude_patterns control which files
-    // are listed in folders on the side bar. These can also be set on a per-
-    // project basis.
-    "folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", ".Trash", ".Trash-*"],
-    "file_exclude_patterns": ["*.pyc", "*.pyo", "*.exe", "*.dll", "*.obj", "*.o", "*.a", "*.lib", "*.so", "*.dylib", "*.ncb", "*.sdf", "*.suo", "*.pdb", "*.idb", ".DS_Store", ".directory", "desktop.ini", "*.class", "*.psd", "*.db", "*.sublime-workspace", "*.sublime-project", "*.xlsx"],
-    // These files will still show up in the side bar, but won't be included in
-    // Goto Anything or Find in Files
-    "binary_file_patterns": ["*.jpg", "*.jpeg", "*.png", "*.gif", "*.ttf", "*.tga", "*.dds", "*.ico", "*.eot", "*.pdf", "*.swf", "*.jar", "*.zip"],
-
-    // open behaviour
-//    "open_files_in_new_window": "finder_only",
-
-    //highlight
-    "highlight_line": true,
-    "highlight_modified_tabs": true,
-    "highlight_line_number": true,
-
-    "close_windows_when_empty": true,
-    "trim_trailing_white_space_on_save": true,
-    "ensure_newline_at_eof_on_save": true,
-    "word_wrap": true,
-    // Display the toggle sidebar button in the status bar
-    "show_sidebar_button": true,
-
-    "ignored_packages": [
-        "Vintage",
-    ],
     "indent_guide_options": [
         "draw_normal",
         "draw_active"
@@ -57,8 +22,33 @@
     "wide_caret": true,
     "caret_style": "wide",
 
-    //theme relevant
-    "theme": "Default.sublime-theme",
+    // minimap
+    "draw_minimap_border": true,
+    "always_show_minimap_viewport": true,
+
+    "auto_complete_commit_on_tab": true,
+    "auto_find_in_selection": true,
+    "bold_folder_labels": true,
+    //indent
+    "detect_indentation": true,
+    "auto_indent": true,
+    "smart_indent": true,
+
+    // Take focus when a file is dragged and dropped onto Sublime Text. On
+    // Windows this value is overidden to true in the platform specific
+    // settings.
+    "focus_on_file_drop": true,
+
+    //highlight
+    "highlight_line": true,
+    "highlight_modified_tabs": true,
+    "highlight_line_number": true,
+
+    "close_windows_when_empty": true,
+    "trim_trailing_white_space_on_save": true,
+    "ensure_newline_at_eof_on_save": true,
+    "word_wrap": true,
+
 
     /*"always_show_minimap_viewport" : true,*/
     "font_options": [
@@ -66,6 +56,41 @@
         "subpixel_antialias"
     ],
 
-    // package "Monokai++"
-    "color_scheme": "Packages/Monokai Extended/Monokai Extended Bright.tmTheme",
+    //
+    // User Interface Settings
+    // Line 525ff in the preferences
+    //
+
+    //theme relevant
+    "theme": "Default.sublime-theme",
+
+    //
+    // Application Behavior Settings
+    // Line 636 ff in the preferences
+    //
+
+    // On Mac, this value is overridden in the platform specific settings.
+    "open_files_in_new_window": "never",
+
+    // Mac only: This controls if an empty window is created at startup or not.
+    "create_window_at_startup": true,
+
+    // Set to true to close windows as soon as the last file is closed, unless
+    // there's a folder open within the window.
+    // On Mac, this value is overridden in the platform specific settings, so
+    // you'll need to place this line in your user settings to override it.
+    "close_windows_when_empty": true,
+
+    // folder_exclude_patterns and file_exclude_patterns control which files
+    // are listed in folders on the side bar. These can also be set on a per-
+    // project basis.
+    "folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", ".Trash", ".Trash-*"],
+    "file_exclude_patterns": ["*.pyc", "*.pyo", "*.exe", "*.dll", "*.obj", "*.o", "*.a", "*.lib", "*.so", "*.dylib", "*.ncb", "*.sdf", "*.suo", "*.pdb", "*.idb", ".DS_Store", ".directory", "desktop.ini", "*.class", "*.psd", "*.db", "*.sublime-workspace", "*.sublime-project", "*.xlsx"],
+    // These files will still show up in the side bar, but won't be included in
+    // Goto Anything or Find in Files
+    "binary_file_patterns": ["*.jpg", "*.jpeg", "*.png", "*.gif", "*.ttf", "*.tga", "*.dds", "*.ico", "*.eot", "*.pdf", "*.swf", "*.jar", "*.zip"],
+
+    "ignored_packages": [
+        "Vintage",
+    ],
 }
