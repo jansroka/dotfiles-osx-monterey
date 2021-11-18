@@ -1,4 +1,5 @@
 ---
 - name: Kill Hazel
   command: killall Hazel
+  ignore_errors: true
   tags: hazel
