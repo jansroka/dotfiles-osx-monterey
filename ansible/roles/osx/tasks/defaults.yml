@@ -93,13 +93,6 @@
     - Kill Safari
   tags: osx, safari
 
-- name: Set Terminal settings
-  osx_defaults: domain=com.apple.Terminal key={{ item.key }} type={{ item.type }} value={{ item.value }}
-  with_items:
-    # Enable Secure Keyboard Entry in Terminal.app
-    - {key: "SecureKeyboardEntry", type: "bool", value: "true"}
-  tags: osx, terminal
-
 - name: Set global settings
   osx_defaults: domain=NSGlobalDomain key={{ item.key }} type={{ item.type }} value={{ item.value }}
   with_items:
