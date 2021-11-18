@@ -9,6 +9,8 @@
       tags: mas
     - role: duti
       tags: duti
+    - role: hazel
+      tags: hazel
     - role: iterm
       tags: iterm
     - role: microsoft

@@ -1,0 +1,4 @@
+---
+- name: Kill Hazel
+  command: killall Hazel
+  tags: hazel
