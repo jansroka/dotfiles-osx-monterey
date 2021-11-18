@@ -11,6 +11,8 @@ These are my dotfiles.
 	- configures homebrew includings casks (runtime: a few minutes)
 - duti
 	- set default app associations via ```duti``` (runtime: < 1 min)
+- hazel
+	- ensure basic Hazel.app settings (runtime: seconds)
 - iterm
 	- ensure our own preferences file is used (runtime: seconds)
 - mas
