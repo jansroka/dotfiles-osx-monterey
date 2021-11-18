@@ -17,6 +17,8 @@
       tags: npm
     - role: osx
       tags: osx
+    - role: softwareupdate
+      tags: softwareupdate
     - role: sublimetext
       tags: sublimetext
     - role: symlinks
