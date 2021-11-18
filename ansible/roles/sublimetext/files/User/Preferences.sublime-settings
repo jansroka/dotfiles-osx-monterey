@@ -79,7 +79,7 @@
     // there's a folder open within the window.
     // On Mac, this value is overridden in the platform specific settings, so
     // you'll need to place this line in your user settings to override it.
-    "close_windows_when_empty": true,
+    /*"close_windows_when_empty": true,*/
 
     // folder_exclude_patterns and file_exclude_patterns control which files
     // are listed in folders on the side bar. These can also be set on a per-
