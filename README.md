@@ -59,6 +59,13 @@ I am using ```pre-commit```in this repo to lint before commits. Install it via b
 brew install pre-commit
 ```
 
+## Contributing
+- Fork it ( https://github.com/jansroka/dotfiles/fork)
+- Create your feature branch (```git checkout -b my-new-feature```)
+- Commit your changes (```git commit -am 'Add some feature'```)
+- Push to the branch (```git push origin my-new-feature```)
+- Create a new Pull Request
+
 ## Inspiration
 - https://github.com/soehlert/osx-ansible
 - https://github.com/geerlingguy/mac-dev-playbook/
