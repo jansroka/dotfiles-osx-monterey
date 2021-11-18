@@ -8,21 +8,28 @@
     // how stuff looks
     "font_size": 14,
     "tab_size": 4,
-    "bold_folder_labels": true,
+    "font_options": [
+        "gray_antialias",
+        "subpixel_antialias"
+    ],
+
+    // Additional spacing at the bottom of each line, in pixels
+    "line_padding_bottom": 3,
+    // Additional spacing at the top of each line, in pixels
+    "line_padding_top": 3,
 
     "indent_guide_options": [
         "draw_normal",
         "draw_active"
     ],
-    "line_padding_bottom": 3,
-    "line_padding_top": 3,
+
     "match_brackets_angle": true,
     "overlay_scroll_bars": "enabled",
     //caret
     "wide_caret": true,
     "caret_style": "wide",
 
-    // minimap
+    // minimap lines 145ff in the preferences
     "draw_minimap_border": true,
     "always_show_minimap_viewport": true,
 
@@ -49,13 +56,6 @@
     "ensure_newline_at_eof_on_save": true,
     "word_wrap": true,
 
-
-    /*"always_show_minimap_viewport" : true,*/
-    "font_options": [
-        "gray_antialias",
-        "subpixel_antialias"
-    ],
-
     //
     // User Interface Settings
     // Line 525ff in the preferences
@@ -63,6 +63,9 @@
 
     //theme relevant
     "theme": "Default.sublime-theme",
+
+    // Show folders in the side bar in bold
+    "bold_folder_labels": true,
 
     //
     // Application Behavior Settings
