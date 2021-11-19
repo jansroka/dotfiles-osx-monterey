@@ -45,14 +45,14 @@ export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include"
 export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
 export PATH=/usr/local/opt/ruby/bin:$PATH
-export PATH=/Users/jan/.rbenv/shims:$PATH
 export PATH=$HOME/.gem/ruby/3.0.0/bin:$PATH
+export PATH=/Users/jan/.rbenv/shims:$PATH
 
 #python
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
 export PYTHONIOENCODING='UTF-8';
 export PATH=/usr/local/share/python:$PATH
-export PATH=/Users/jan/Library/Python/3.9/lib/python/site-packages:$PATH
+export PATH=$HOME/Library/Python/3.9/lib/python/site-packages:$PATH
 
 # Add `~/bin` to the `$PATH`
 export PATH=${HOME}/bin:/usr/local/sbin:${PATH}
