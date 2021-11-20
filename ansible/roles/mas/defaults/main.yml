@@ -2,5 +2,12 @@
 # Make sure you do not clash with a brew cask here!
 # Get the list of currently installed with 'mas list'.
 mas_installed_apps:
-  - 604802021  # Outline
-  - 1303222628  # Paprika Recipe Manager 3
+  - {id: 604802021, name: "Outline"}
+  - {id: 1303222628, name: "Paprika Recipe Manager 3"}
+
+mas_uninstalled_apps:
+  - {id: 408981434, name: "iMovie"}
+  - {id: 409183694, name: "Keynote"}
+  - {id: 409201541, name: "Pages"}
+  - {id: 409203825, name: "Numbers"}
+  - {id: 682658836, name: "GarageBand"}
