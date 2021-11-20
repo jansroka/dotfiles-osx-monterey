@@ -15,6 +15,8 @@ These are my dotfiles.
 	- ensure basic Hazel.app settings (runtime: seconds)
 - iterm
 	- ensure our own preferences file is used (runtime: seconds)
+- maintenance
+	- runs a few maintenance tasks like repairPermissions, verifyVolume (runtime: several minutes)
 - mas
 	- takes care of apps installed via Mac App Store (runtime: 1 min)
 - microsoft
@@ -46,9 +48,9 @@ brew install ansible
 ```
 
 ## How to run with a one-liner
-Run this from your home dir.
+Run this:
 ```
-curl -L https://raw.github.com/jansroka/dotfiles/master/bin/setup.sh | bash
+cd; curl -L https://raw.github.com/jansroka/dotfiles/master/bin/setup.sh | bash
 ```
 Make sure to read the code before running.
 
@@ -56,6 +58,13 @@ Make sure to read the code before running.
 ```
 time ANSIBLE_CONFIG=./ansible/ansible.cfg ansible-playbook -i ansible/hosts ansible/dotfiles.yml -v --ask-become-pass
 ```
+
+## How to run the maintenance playbook
+Run this:
+```
+time ANSIBLE_CONFIG=./ansible/ansible.cfg ansible-playbook -i ./ansible/hosts ./ansible/maintenance.yml -v --ask-become-pass
+```
+Make sure to read the code before running.
 
 ## How to make changes to this repo // pre-commit hooks
 I am using ```pre-commit```in this repo to lint before commits. Install it via brew using
