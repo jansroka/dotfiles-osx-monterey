@@ -7,12 +7,12 @@ I am sharing it on GitHub in the hopes that it might be as useful to others as i
 Note: Lots of empty space in here. This is a work in progress.
 
 ## Table of Contents
-- [After first boot](###After-first-boot)
-- [Installing & running ```dotfiles```](##Installing-&-running-dotfiles)
-- [Configure Applications installed via ```brew cask```](## Configure Applications installed via ```brew cask```)
-- [Configure Applications installed via ```mas```](## Configure Applications installed via ```mas```)
-- [Recover data from Arq backups](## Recover data from Arq backups)
-- [Finishing touches](## Finishing touches)
+- [After first boot](#after-first-boot)
+- [Installing & running ```dotfiles```](#installing--running-dotfiles)
+- [Configure Applications installed via ```brew cask```](#configure-applications-installed-via-brew-cask)
+- [Configure Applications installed via ```mas```](#configure-applications-installed-via-mas)
+- [Recover data from Arq backups](#recover-data-from-arq-backups)
+- [Finishing touches](#finishing-touches)
 
 ## After first boot
 Ideally you read up on current best practice for this _before_ you start.
@@ -94,7 +94,7 @@ This will very likely require a reboot.
 - Ensure start at login
 - Paste without formatting
 
-## Microsoft Office
+### Microsoft Office
 - Start Outlook and add email accounts
 - Start all office apps once so that caches can be build
 
