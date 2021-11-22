@@ -97,7 +97,6 @@ cask_packages:
   - zoom
 
 cask_ql_packages:
-  - provisionql
   - qlcolorcode
   - qlimagesize
   - qlmarkdown
