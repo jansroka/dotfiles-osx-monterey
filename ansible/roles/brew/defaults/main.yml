@@ -32,6 +32,7 @@ brew_packages:
   - less
   - mas
   - nano
+  - ngrok
   - nmap
   - node
   - openssh
@@ -72,7 +73,6 @@ cask_packages:
   - microsoft-auto-update
   - microsoft-teams
   - microsoft-remote-desktop
-  - ngrok
   - omnifocus
   - omniplan
   - osxfuse
