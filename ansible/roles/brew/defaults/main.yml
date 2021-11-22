@@ -66,6 +66,7 @@ cask_packages:
   - iterm2
   - kindle
   - launchcontrol
+  - little-snitch
   - maccy
   - microsoft-office
   - microsoft-auto-update
