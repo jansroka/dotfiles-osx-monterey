@@ -6,6 +6,14 @@ I am sharing it on GitHub in the hopes that it might be as useful to others as i
 
 Note: Lots of empty space in here. This is a work in progress.
 
+## Table of Contents
+1. [After first boot](### After first boot)
+2. [Installing & running ```dotfiles```](## Installing & running ```dotfiles```)
+3. [Configure Applications installed via ```brew cask```](## Configure Applications installed via ```brew cask```)
+4. [Configure Applications installed via ```mas```](## Configure Applications installed via ```mas```)
+5. [Recover data from Arq backups](## Recover data from Arq backups)
+6. [Finishing touches](## Finishing touches)
+
 ## After first boot
 Ideally you read up on current best practice for this _before_ you start.
 
@@ -27,7 +35,7 @@ Disable spotlight on:
 
 Then reboot, login and let's continue with the next step.
 
-## Installing software
+## Installing & running ```dotfiles```
 
 ### Create some required folders
 ```
@@ -45,7 +53,7 @@ cd; curl -L https://raw.github.com/jansroka/dotfiles/master/bin/setup.sh | bash
 
 This will run some time, easily 30 minutes.
 
-## Configure Applications installed via ```brew cask``
+## Configure Applications installed via ```brew cask```
 
 Go through ```/Applications``` and one by one (re-)set up your config.
 
@@ -113,7 +121,7 @@ This will very likely require a reboot.
 - Add License
 - Make sure it runs on startup
 
-## Configure Applications installed via ```mas``
+## Configure Applications installed via ```mas```
 
 ### Day One
 - Login & sync
@@ -125,7 +133,7 @@ This will very likely require a reboot.
 ### Paprika
 - Login & sync
 
-## Recover data from Arq Backups
+## Recover data from Arq backups
 
 - Check current Arq restore guides on arqbackup.com
 
@@ -137,7 +145,7 @@ This used to work in the past:
 ### Configure VirtualBox
 - Recover Windows 10 VM
 
-## Finishing touches & first maintenance
+## Finishing touches
 
 Voila! By now you should have a very usable system which is very close to what you had before.
 
@@ -145,4 +153,4 @@ Voila! By now you should have a very usable system which is very close to what y
 There's a good chance your mac would not mind its first spring cleaning. Therefore, check out the ```maintenance.yml```playbook and decide if you want to run it.
 
 ### Add any issues and ideas on GitHub
-
+Latest now would be a great time to add anything that popped up to the issue tracker.
