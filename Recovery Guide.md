@@ -7,8 +7,8 @@ I am sharing it on GitHub in the hopes that it might be as useful to others as i
 Note: Lots of empty space in here. This is a work in progress.
 
 ## Table of Contents
-- [After first boot](### After first boot)
-- [Installing & running ```dotfiles```](## Installing & running ```dotfiles```)
+- [After first boot](###After-first-boot)
+- [Installing & running ```dotfiles```](##Installing-&-running-dotfiles)
 - [Configure Applications installed via ```brew cask```](## Configure Applications installed via ```brew cask```)
 - [Configure Applications installed via ```mas```](## Configure Applications installed via ```mas```)
 - [Recover data from Arq backups](## Recover data from Arq backups)
