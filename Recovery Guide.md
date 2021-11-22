@@ -7,12 +7,12 @@ I am sharing it on GitHub in the hopes that it might be as useful to others as i
 Note: Lots of empty space in here. This is a work in progress.
 
 ## Table of Contents
-1. [After first boot](### After first boot)
-2. [Installing & running ```dotfiles```](## Installing & running ```dotfiles```)
-3. [Configure Applications installed via ```brew cask```](## Configure Applications installed via ```brew cask```)
-4. [Configure Applications installed via ```mas```](## Configure Applications installed via ```mas```)
-5. [Recover data from Arq backups](## Recover data from Arq backups)
-6. [Finishing touches](## Finishing touches)
+- [After first boot](### After first boot)
+- [Installing & running ```dotfiles```](## Installing & running ```dotfiles```)
+- [Configure Applications installed via ```brew cask```](## Configure Applications installed via ```brew cask```)
+- [Configure Applications installed via ```mas```](## Configure Applications installed via ```mas```)
+- [Recover data from Arq backups](## Recover data from Arq backups)
+- [Finishing touches](## Finishing touches)
 
 ## After first boot
 Ideally you read up on current best practice for this _before_ you start.
