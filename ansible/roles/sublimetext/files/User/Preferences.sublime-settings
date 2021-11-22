@@ -65,7 +65,7 @@
     "theme": "Default.sublime-theme",
 
     // Show folders in the side bar in bold
-    "bold_folder_labels": true,
+    /*"bold_folder_labels": true,*/
 
     //
     // Application Behavior Settings
@@ -76,13 +76,13 @@
     "open_files_in_new_window": "never",
 
     // Mac only: This controls if an empty window is created at startup or not.
-    "create_window_at_startup": true,
+    "create_window_at_startup": false,
 
     // Set to true to close windows as soon as the last file is closed, unless
     // there's a folder open within the window.
     // On Mac, this value is overridden in the platform specific settings, so
     // you'll need to place this line in your user settings to override it.
-    /*"close_windows_when_empty": true,*/
+    "close_windows_when_empty": true,
 
     // folder_exclude_patterns and file_exclude_patterns control which files
     // are listed in folders on the side bar. These can also be set on a per-
