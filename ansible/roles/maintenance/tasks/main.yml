@@ -1,6 +1,29 @@
 ---
 # This is not a work of art, but out of necessity. I know this can be made much nicer
 
+# update & upgrade
+- name: Update & upgrade brew
+  homebrew:
+    update_homebrew: true
+    upgrade_all: true
+  tags: maintenance
+
+# cleanup
+- name: Cleanup brew
+  command: brew cleanup
+  tags: maintenance
+
+- name: Upgrade all Mac App Store apps
+  mas:
+    upgrade_all: true
+  tags: maintenance
+
+- name: Check OSX softwareupdate
+  command: "softwareupdate --all --install --force"
+  register: softwareupdate
+  changed_when: "softwareupdate.rc != 0 and 'No updates are available.' not in softwareupdate.stderr"
+  tags: maintenance
+
 # repair permissions
 # figure out current user id
 - name: Find user id / $(id -u)
