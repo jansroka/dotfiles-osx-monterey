@@ -4,16 +4,12 @@
     name: sublime-text
     greedy: true
     state: present
-  register: result
   tags: sublimetext
 
 - name: Remove Packages folder
   file:
     path: "/Users/jan/Library/Application Support/Sublime Text/Packages/"
-    state: "{{ item }}"
-  with_items:
-    - absent
-    - directory
+    state: absent
   tags: sublimetext
 
 - name: Re-add Packages folder
@@ -35,9 +31,9 @@
 # Important to understand:
 # Don't symlink into /usr/bin, this is blocked by OSX.
 # Use /usr/local/bin instead
-- name: "Ensure symlinks in bin"
+- name: Ensure symlinks in bin
   file:
-    src: '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'
+    src: "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"
     dest: "/usr/local/bin/{{ item }}"
     state: link
   become: true
