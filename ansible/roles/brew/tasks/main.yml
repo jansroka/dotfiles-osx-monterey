@@ -6,7 +6,7 @@
   tags: brew
 
 - name: Get list of already installed Homebrew formulae
-  shell: "brew leaves"
+  command: brew leaves
   register: brew_output
   tags: brew
 
@@ -23,7 +23,7 @@
   tags: brew
 
 - name: Get list of already installed Homebrew casks
-  shell: "brew list --cask"
+  command: brew list --cask
   register: cask_output
   tags: brew
 
