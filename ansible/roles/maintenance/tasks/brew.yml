@@ -1,0 +1,32 @@
+---
+# This is not a work of art, but out of necessity. I know this can be made much nicer
+
+# update & upgrade
+- name: Update & upgrade brew
+  homebrew:
+    update_homebrew: true
+    upgrade_all: true
+  tags: maintenance
+
+# cleanup
+- name: Cleanup brew
+  command: brew cleanup --prune=all -s
+  tags: maintenance
+
+# delete brew caches
+# figure out cache path
+- name: Find brew cache path / $(brew --cache)
+  command: brew --cache
+  register: brewcachepath
+  tags: maintenance
+
+# Run "rm -rfv {{ brewcachepath.stdout }}"
+- name: Delete brew cache
+  file:
+    path: '{{ brewcachepath.stdout }}'
+    state: absent
+  tags: maintenance
+
+- name: Repair taps
+  command: brew tap --repair
+  tags: maintenance

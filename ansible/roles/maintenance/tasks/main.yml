@@ -1,28 +1,11 @@
 ---
 # This is not a work of art, but out of necessity. I know this can be made much nicer
 
-# update & upgrade
-- name: Update & upgrade brew
-  homebrew:
-    update_homebrew: true
-    upgrade_all: true
-  tags: maintenance
+- name: include Spotlight maintenance tasks
+  include: spotlight.yml
 
-# cleanup
-- name: Cleanup brew
-  command: brew cleanup --prune=all
-  tags: maintenance
-
-# delete brew caches
-# figure out cache path
-- name: Find brew cache path / $(brew --cache)
-  command: brew --cache
-  register: brewcachepath
-  tags: maintenance
-
-- name: Delete brew cache
-  command: "rm -rfv {{ brewcachepath.stdout }}"
-  tags: maintenance
+- name: include brew maintenance tasks
+  include: brew.yml
 
 - name: Upgrade all Mac App Store apps
   mas:
@@ -46,20 +29,20 @@
 - name: Run 'diskutil resetuserpermissions / $(id -u)'
   command: "diskutil resetuserpermissions / {{ userid.stdout }}"
   become: true
-  tags: maintenance, skip_ansible_lint
+  tags: maintenance
 
 # Check disk
 # Get list with 'diskutil list'
 - name: Run 'diskutil verifyVolume /dev/disk1'
   command: "diskutil verifyVolume /dev/disk1"
   become: true
-  tags: maintenance, skip_ansible_lint
+  tags: maintenance
 
 # flush DNS
 - name: Run 'dscacheutil -flushcache && killall -HUP mDNSResponder'
   command: "dscacheutil -flushcache && killall -HUP mDNSResponder"
   become: true
-  tags: maintenance, skip_ansible_lint
+  tags: maintenance
 
 # empty all Trashes
 - name: Run 'rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash;'
@@ -69,9 +52,11 @@
 
 # Speed up terminal by clearing ASL logs
 - name: Run 'rm -rfv /private/var/log/asl/*.asl'
-  command: "rm -rfv /private/var/log/asl/*.asl"
+  file:
+    path: '/private/var/log/asl/*.asl'
+    state: absent
   become: true
-  tags: maintenance, skip_ansible_lint
+  tags: maintenance
 
 # Delete launch service quarantine (list of all files ever downloaded)
 - name: Clean up LaunchServices quarantine
@@ -85,4 +70,41 @@
     /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister
     -kill -r -domain local -domain system -domain user && killall Finder
   become: true
+  tags: maintenance
+
+# Purge memory
+- name: Purge inactive memory
+  command: sudo purge
+  become: true
+  tags: maintenance
+
+# Run periodics
+- name: Run periodic scripts
+  command: sudo periodic daily weekly monthly
+  become: true
+  tags: maintenance
+
+- name: Delete all .DS_Store files
+  command: sudo find / -name ".DS_Store" -exec rm {} \;
+  become: true
+  tags: maintenance
+
+# Run rm -rf ~/Library/Caches/*
+- name: Run 'rm -rf ~/Library/Caches/*'
+  file:
+    path: '~/Library/Caches/'
+    state: absent
+  become: true
+  tags: maintenance
+
+- name: Run 'yarn cache clean'
+  command: yarn cache clean
+  tags: maintenance
+
+- name: Run 'gem cleanup'
+  command: gem cleanup
+  tags: maintenance
+
+- name: Clear print queue
+  command: cancel -a -
   tags: maintenance
