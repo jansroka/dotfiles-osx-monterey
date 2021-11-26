@@ -10,7 +10,18 @@
 
 # cleanup
 - name: Cleanup brew
-  command: brew cleanup
+  command: brew cleanup --prune=all
+  tags: maintenance
+
+# delete brew caches
+# figure out cache path
+- name: Find brew cache path / $(brew --cache)
+  command: brew --cache
+  register: brewcachepath
+  tags: maintenance
+
+- name: Delete brew cache
+  command: "rm -rfv {{ brewcachepath.stdout }}"
   tags: maintenance
 
 - name: Upgrade all Mac App Store apps
@@ -47,12 +58,6 @@
 # flush DNS
 - name: Run 'dscacheutil -flushcache && killall -HUP mDNSResponder'
   command: "dscacheutil -flushcache && killall -HUP mDNSResponder"
-  become: true
-  tags: maintenance, skip_ansible_lint
-
-# empty all Trashes
-- name: Run 'rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash;'
-  command: "rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash;"
   become: true
   tags: maintenance, skip_ansible_lint
 
