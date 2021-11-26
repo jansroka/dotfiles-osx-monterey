@@ -84,10 +84,10 @@
   become: true
   tags: maintenance
 
-- name: Delete all .DS_Store files
-  command: sudo find / -name ".DS_Store" -exec rm {} \;
-  become: true
-  tags: maintenance
+# - name: Delete all .DS_Store files
+#   command: find ~/ -name ".DS_Store" -exec rm {} \;
+#   become: true
+#   tags: maintenance
 
 # Run rm -rf ~/Library/Caches/*
 - name: Run 'rm -rf ~/Library/Caches/*'
