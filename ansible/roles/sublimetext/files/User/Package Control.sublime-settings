@@ -28,6 +28,7 @@
 		"SublimeLinter-jshint",
 		"SublimeLinter-json",
 		"SublimeLinter-shellcheck",
+		"SublimeLinter-stylelint",
 		"SyncedSideBar",
 		"TrailingSpaces",
 	],
