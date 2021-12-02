@@ -33,7 +33,7 @@
     - {key: "ShowMountedServersOnDesktop", type: "bool", value: "true"}
     - {key: "ShowRemovableMediaOnDesktop", type: "bool", value: "true"}
     # Show status bar
-    - {key: "ShowStatusBar", type: "bool", value: "false"}
+    - {key: "ShowStatusBar", type: "bool", value: "true"}
     # Show path bar
     - {key: "ShowPathbar", type: "bool", value: "true"}
     # Show "Quit Finder" in menu
