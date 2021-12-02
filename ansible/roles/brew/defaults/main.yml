@@ -29,7 +29,6 @@ brew_packages:
   - libffi
   - mas
   - nano
-  - ngrok
   - nmap
   - node
   - openssh
@@ -70,6 +69,7 @@ cask_packages:
   - microsoft-auto-update
   - microsoft-teams
   - microsoft-remote-desktop
+  - ngrok
   - omnifocus
   - omniplan
   - osxfuse
