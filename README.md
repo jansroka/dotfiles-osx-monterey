@@ -50,7 +50,7 @@ brew install ansible
 ## How to run with a one-liner
 Run this:
 ```
-cd; curl -L https://raw.github.com/jansroka/dotfiles/master/bin/setup.sh | bash
+curl -L https://raw.github.com/jansroka/dotfiles/master/bin/setup.sh | bash
 ```
 Make sure to read the code before running.
 

@@ -4,6 +4,9 @@ set -e
 echo "[i] Ask for sudo password"
 sudo -v
 
+# move to ~ if we are not there yet
+cd
+
 # install Command Line Tools
 if [[ ! -x /usr/bin/gcc ]]; then
   echo "[i] Install macOS Command Line Tools"
