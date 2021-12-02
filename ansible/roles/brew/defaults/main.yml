@@ -13,23 +13,20 @@ brew_packages:
   - automake
   - awscli
   - bash
-  - bash-completion@2
   - binutils
   - coreutils
   - diffutils
   - duf
   - duti
   - exiftool
-  - gh
   - git
-  - libffi
-  - unbound
-  - nghttp2
   - gnupg
   - gzip
+  - heroku/brew/heroku
   - htop
   - jq
   - less
+  - libffi
   - mas
   - nano
   - ngrok
@@ -39,20 +36,20 @@ brew_packages:
   - postgresql
   - pre-commit
   - python
-  - ruby-build
   - rbenv
   - rsync
   - ruby
+  - ruby-build
   - shellcheck
   - ssh-copy-id
   - tidy-html5
   - tree
+  - unbound
   - wget
   - wifi-password
   - yamllint
   - zlib
   - zsh
-  - heroku/brew/heroku
 
 cask_packages:
   - 1password
