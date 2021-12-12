@@ -1,11 +1,11 @@
 ---
 # This is not a work of art, but out of necessity. I know this can be made much nicer
 
-- name: include Spotlight maintenance tasks
-  include: spotlight.yml
+- name: import Spotlight maintenance tasks
+  import_tasks: spotlight.yml
 
-- name: include brew maintenance tasks
-  include: brew.yml
+- name: import brew maintenance tasks
+  import_tasks: brew.yml
 
 - name: Upgrade all Mac App Store apps
   mas:

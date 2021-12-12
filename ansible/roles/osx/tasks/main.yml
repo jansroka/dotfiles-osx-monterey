@@ -1,6 +1,6 @@
 ---
-- name: include base tasks
-  include: base.yml
+- name: import base tasks
+  import_tasks: base.yml
 
-- name: include defaults tasks
-  include: defaults.yml
+- name: import defaults tasks
+  import_tasks: defaults.yml
