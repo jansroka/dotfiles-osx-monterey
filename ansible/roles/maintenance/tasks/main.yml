@@ -10,13 +10,13 @@
 - name: Upgrade all Mac App Store apps
   mas:
     upgrade_all: true
-  tags: maintenance
+  tags: maintenance, softwareupdate
 
 - name: Check OSX softwareupdate
   command: "softwareupdate --all --install --force"
   register: softwareupdate
   changed_when: "softwareupdate.rc != 0 and 'No updates are available.' not in softwareupdate.stderr"
-  tags: maintenance
+  tags: maintenance, softwareupdate
 
 # repair permissions
 # figure out current user id

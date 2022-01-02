@@ -6,27 +6,27 @@
   homebrew:
     update_homebrew: true
     upgrade_all: true
-  tags: maintenance
+  tags: maintenance, softwareupdate
 
 # cleanup
 - name: Cleanup brew
   command: brew cleanup --prune=all -s
-  tags: maintenance
+  tags: maintenance, softwareupdate
 
 # delete brew caches
 # figure out cache path
 - name: Find brew cache path / $(brew --cache)
   command: brew --cache
   register: brewcachepath
-  tags: maintenance
+  tags: maintenance, softwareupdate
 
 # Run "rm -rfv {{ brewcachepath.stdout }}"
 - name: Delete brew cache
   file:
     path: '{{ brewcachepath.stdout }}'
     state: absent
-  tags: maintenance
+  tags: maintenance, softwareupdate
 
 - name: Repair taps
   command: brew tap --repair
-  tags: maintenance
+  tags: maintenance, softwareupdate
