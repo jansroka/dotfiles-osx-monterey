@@ -2,9 +2,12 @@
 - name: Install Node Packages
   npm: name={{ item }} state=present global=yes
   with_items:
+    - eslint
     - joi
-    - npm
-    - yarn
     - jshint
+    - netlify-cli
     - npm-upgrade
+    - npm
+    - prettier
+    - yarn
   tags: npm
