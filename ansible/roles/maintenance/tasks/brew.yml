@@ -2,9 +2,14 @@
 # This is not a work of art, but out of necessity. I know this can be made much nicer
 
 # update & upgrade
-- name: Update & upgrade brew
+- name: Update & upgrade brew formulae
   homebrew:
     update_homebrew: true
+    upgrade_all: true
+  tags: maintenance, softwareupdate
+
+- name: Update & upgrade brew casks
+  homebrew_cask:
     upgrade_all: true
   tags: maintenance, softwareupdate
 

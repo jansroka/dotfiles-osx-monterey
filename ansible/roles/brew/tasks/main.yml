@@ -50,9 +50,14 @@
   loop: "{{ cask_ql_packages }}"
   tags: brew
 
-- name: Update & upgrade
+- name: Update & upgrade formulae
   homebrew:
     update_homebrew: true
+    upgrade_all: true
+  tags: brew
+
+- name: Update & upgrade casks
+  homebrew_cask:
     upgrade_all: true
   tags: brew
 
