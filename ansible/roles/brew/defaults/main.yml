@@ -41,12 +41,14 @@ brew_packages:
   - ruby-build
   - shellcheck
   - ssh-copy-id
+  - stripe/stripe-cli/stripe
   - tidy-html5
   - tree
   - unbound
   - wget
   - wifi-password
   - yamllint
+  - yq
   - zlib
   - zsh
 
