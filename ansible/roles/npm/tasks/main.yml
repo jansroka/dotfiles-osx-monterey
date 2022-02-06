@@ -2,6 +2,7 @@
 - name: Install Node Packages
   npm: name={{ item }} state=present global=yes
   with_items:
+    - browser-sync
     - eslint
     - joi
     - jshint
