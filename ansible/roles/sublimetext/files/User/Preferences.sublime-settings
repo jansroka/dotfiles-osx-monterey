@@ -6,7 +6,7 @@
     "color_scheme": "Packages/Monokai Extended/Monokai Extended Bright.tmTheme",
 
     // how stuff looks
-    "font_size": 14,
+    /*"font_size": 24,*/
     "tab_size": 4,
     "font_options": [
         "gray_antialias",
@@ -96,4 +96,5 @@
     "ignored_packages": [
         "Vintage",
     ],
+    "font_size": 14,
 }

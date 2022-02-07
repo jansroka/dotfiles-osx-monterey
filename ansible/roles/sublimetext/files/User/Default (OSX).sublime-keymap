@@ -1,5 +1,5 @@
 [
-	{ "keys": ["cmd+0",], "command": "reset_font_size" },
+	{ "keys": ["super+0",], "command": "reset_font_size" },
 
 	// For Package MarkdownLivePreview
 	{
