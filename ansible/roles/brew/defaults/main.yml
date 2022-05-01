@@ -75,7 +75,6 @@ cask_packages:
   - microsoft-remote-desktop
   - ngrok
   - omnifocus
-  - omniplan
   - scrivener
   - sequential
   - simple-comic
