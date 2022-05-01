@@ -55,7 +55,7 @@ export PATH=/usr/local/share/python:$PATH
 export PATH=$HOME/Library/Python/3.9/lib/python/site-packages:$PATH
 
 # Add `~/bin` to the `$PATH`
-export PATH=${HOME}/bin:/usr/local/sbin:${PATH}
+export PATH=${HOME}/bin:${PATH}
 
 # node
 # Enable persistent REPL history for `node`.
