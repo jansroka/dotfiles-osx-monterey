@@ -76,7 +76,6 @@ cask_packages:
   - ngrok
   - omnifocus
   - omniplan
-  - osxfuse
   - scrivener
   - sequential
   - simple-comic
