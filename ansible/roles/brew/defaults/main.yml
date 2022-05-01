@@ -60,6 +60,7 @@ cask_packages:
   - dupeguru
   - fawkes
   - firefox
+  - github
   - google-chrome
   - hazel
   - iterm2
@@ -80,7 +81,6 @@ cask_packages:
   - simple-comic
   - skype
   - slack
-  - sourcetree
   - spotify
   - sublime-text
   - superduper
