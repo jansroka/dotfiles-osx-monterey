@@ -7,7 +7,7 @@
 
     // how stuff looks
     /*"font_size": 24,*/
-    "tab_size": 4,
+    "tab_size": 2,
     "font_options": [
         "gray_antialias",
         "subpixel_antialias"
