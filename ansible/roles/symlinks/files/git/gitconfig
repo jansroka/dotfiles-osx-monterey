@@ -47,7 +47,7 @@
 	changed = green
 	untracked = cyan
 [init]
-	defaultBranch = master
+	defaultBranch = main
 [fetch]
 	prune = true
 [pull]
