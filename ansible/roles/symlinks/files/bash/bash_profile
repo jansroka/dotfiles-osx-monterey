@@ -22,3 +22,6 @@ shopt -s cdspell;
 
 # init rbenv for ruby
 eval "$(rbenv init -)"
+
+# needed for pyenv
+eval "$(pyenv init -)"
