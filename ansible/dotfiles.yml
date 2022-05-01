@@ -5,6 +5,8 @@
   roles:
     - role: brew
       tags: brew
+    - role: dock
+      tags: dock
     - role: mas
       tags: mas
     - role: duti

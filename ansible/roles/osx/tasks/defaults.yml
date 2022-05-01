@@ -57,23 +57,6 @@
     - Kill Finder
   tags: osx, finder
 
-- name: Set Dock settings
-  osx_defaults: domain=com.apple.dock key={{ item.key }} type={{ item.type }} value={{ item.value }}
-  with_items:
-    # Enable highlight hover effect for the grid view of a stack (Dock)
-    - {key: "mouse-over-hilite-stack", type: "bool", value: "true"}
-    # Set the icon size (px) of Dock items
-    - {key: "tilesize", type: "float", value: "{{ dock_icon_size }}"}
-    # Show indicator lights for open applications in the Dock
-    - {key: "show-process-indicators", type: "bool", value: "true"}
-    # Speed up Mission Control animations
-    - {key: "expose-animation-duration", type: "float", value: "0.1"}
-    # Don’t show Dashboard as a Space
-    - {key: "dashboard-in-overlay", type: "bool", value: "false"}
-  notify:
-    - Kill Dock
-  tags: osx, dock
-
 - name: Set Safari settings
   osx_defaults: domain=com.apple.Safari key={{ item.key }} type={{ item.type }} value={{ item.value }}
   with_items:

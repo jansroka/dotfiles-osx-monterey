@@ -1,0 +1,4 @@
+---
+- name: Kill Dock
+  command: killall Dock
+  tags: dock

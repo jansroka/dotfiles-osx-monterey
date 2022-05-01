@@ -16,6 +16,7 @@ brew_packages:
   - binutils
   - coreutils
   - diffutils
+  - dockutil
   - duf
   - duti
   - exiftool

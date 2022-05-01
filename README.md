@@ -9,6 +9,8 @@ These are my dotfiles. There are many like them, but these ones are mine.
 ## Available ansible roles
 - brew
 	- configures homebrew includings casks (runtime: a few minutes)
+- dock
+	- configure your OSX dock (runtime: < 1 min)
 - duti
 	- set default app associations via ```duti``` (runtime: < 1 min)
 - hazel
@@ -87,6 +89,7 @@ brew install pre-commit
 ## Inspiration
 - https://github.com/soehlert/osx-ansible
 - https://github.com/geerlingguy/mac-dev-playbook/
+- https://github.com/geerlingguy/ansible-collection-mac
 - https://github.com/kinglouie/ansible-role-macos
 - https://github.com/fgimian/macbuild-ansible
 - https://github.com/elnappo/dotfiles/
