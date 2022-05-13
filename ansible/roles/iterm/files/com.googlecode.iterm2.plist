@@ -167,12 +167,16 @@
 			<true/>
 			<key>Background Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.0</real>
+				<real>0.23743591805214237</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.0</real>
+				<real>0.23743591805214237</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>0.24465751647949219</real>
 			</dict>
 			<key>Background Image Location</key>
 			<string></string>
@@ -613,6 +617,10 @@
 	<key>SoundForEsc</key>
 	<false/>
 	<key>VisualIndicatorForEsc</key>
+	<false/>
+	<key>kCPKSelectionViewPreferredModeKey</key>
+	<integer>0</integer>
+	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
 	<false/>
 </dict>
 </plist>
