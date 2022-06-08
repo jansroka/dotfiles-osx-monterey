@@ -6,33 +6,11 @@
   homebrew:
     update_homebrew: true
     upgrade_all: true
-  async: 1000
-  poll: 0
-  register: brew_formulae_sleeper
-  tags: maintenance, softwareupdate
-
-- name: 'Update & upgrade brew formulae - check on async task'
-  async_status:
-    jid: "{{ brew_formulae_sleeper.ansible_job_id }}"
-  register: job_result
-  until: job_result.finished
-  retries: 50
   tags: maintenance, softwareupdate
 
 - name: Update & upgrade brew casks
   homebrew_cask:
     upgrade_all: true
-  async: 1000
-  poll: 0
-  register: brew_cask_sleeper
-  tags: maintenance, softwareupdate
-
-- name: 'Update & upgrade brew casks - check on async task'
-  async_status:
-    jid: "{{ brew_cask_sleeper.ansible_job_id }}"
-  register: job_result
-  until: job_result.finished
-  retries: 30
   tags: maintenance, softwareupdate
 
 # cleanup
