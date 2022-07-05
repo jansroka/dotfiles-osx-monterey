@@ -7,10 +7,12 @@
 	<key>Default Bookmark Guid</key>
 	<string>444508CA-F062-44C4-AAD6-60F19CE2594A</string>
 	<key>EnableProxyIcon</key>
-	<false/>
+	<true/>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
+	<true/>
+	<key>MaxVertically</key>
 	<true/>
 	<key>New Bookmarks</key>
 	<array>
