@@ -14,29 +14,33 @@ brew_packages:
   - awscli
   - bash
   - binutils
+  - cmake
   - coreutils
   - diffutils
-  - dockutil
   - duf
   - duti
   - exiftool
   - git
   - gnupg
   - gzip
+  - hcloud
   - heroku/brew/heroku
   - htop
   - jq
   - less
   - libffi
+  - lotyp/formulae/dockutil
   - mas
   - nano
   - nmap
   - node
+  - nvm
   - openssh
   - postgresql
   - pre-commit
   - pyenv
   - rbenv
+  - redis
   - rsync
   - ruby
   - ruby-build
@@ -56,11 +60,13 @@ brew_packages:
 cask_packages:
   - 1password
   - arq
+  - chromedriver
   - cyberduck
   - dropbox
   - dupeguru
   - fawkes
   - firefox
+  - git-credential-manager
   - github
   - google-chrome
   - hazel
@@ -69,14 +75,17 @@ cask_packages:
   - launchcontrol
   - little-snitch
   - maccy
-  - microsoft-office
+  - macfuse
   - microsoft-auto-update
-  - microsoft-teams
+  - microsoft-office
   - microsoft-remote-desktop
+  - microsoft-teams
+  - netnewswire
   - ngrok
   - omnifocus
   - scrivener
   - sequential
+  - signal
   - simple-comic
   - skype
   - slack
@@ -91,7 +100,9 @@ cask_packages:
   - transmission
   - veracrypt
   - virtualbox
+  - visual-studio-code
   - vlc
+  - xmind
   - zoom
 
 cask_ql_packages:

@@ -5,6 +5,7 @@ mas_installed_apps:
   - {id: 1055511498, name: "Day One"}
   - {id: 604802021, name: "Outline"}
   - {id: 1303222628, name: "Paprika Recipe Manager 3"}
+  - {id: 1351639930, name: "Gifski"}
 
 mas_uninstalled_apps:
   - {id: 408981434, name: "iMovie"}
