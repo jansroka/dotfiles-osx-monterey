@@ -1,0 +1,12 @@
+---
+default_gems:
+  - bundler
+  - csv
+  - date
+  - debug
+  - json
+  - liquid
+  - prettyprint
+  - rake
+  - rss
+  - yaml

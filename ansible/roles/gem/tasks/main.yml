@@ -1,0 +1,32 @@
+---
+- name: Get all currently installed gem
+  ansible.builtin.shell: "gem list | sed 's/([^)]*)//g;s/  / /g' | sed 's/ //g'"
+  register: installedgems
+  changed_when: false
+  tags: gem
+
+- name: Install gem Packages (skip if already installed)
+  community.general.gem:
+    name: "{{ item }}"
+    state: present
+    user_install: no
+    norc: yes
+  loop: "{{ default_gems }}"
+  when: item not in installedgems.stdout
+  tags: gem
+
+- name: Get all currently installed and outdated gem
+  ansible.builtin.shell: "gem outdated | sed 's/([^)]*)//g;s/  / /g' | sed 's/ //g'"
+  register: outdatedgems
+  changed_when: false
+  tags: gem, maintenance
+
+- name: Update all currently installed and outdated gem
+  community.general.gem:
+    name: "{{ item }}"
+    state: latest
+    norc: yes
+  with_items: "{{ outdatedgems.stdout_lines }}"
+  register: pkg_result
+  until: pkg_result is success
+  tags: gem, maintenance
