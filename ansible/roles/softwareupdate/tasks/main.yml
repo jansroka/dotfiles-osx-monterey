@@ -1,6 +1,0 @@
----
-- name: Check OSX softwareupdate
-  ansible.builtin.command: "softwareupdate --all --install --force"
-  register: softwareupdate
-  changed_when: "softwareupdate.rc != 0 and 'No updates are available.' not in softwareupdate.stderr"
-  tags: softwareupdate
