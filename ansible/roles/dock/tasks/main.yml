@@ -1,7 +1,7 @@
 ---
 # from https://github.com/geerlingguy/ansible-collection-mac
 - name: Install dockutil
-  community.general.community.general.homebrew:
+  community.general.homebrew:
     name: dockutil
     state: present
   tags: dock
