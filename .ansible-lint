@@ -9,7 +9,6 @@ exclude_paths:
   - .cache/  # implicit unless exclude_paths is defined in config
   - .github/
 
-
 # This makes linter to fully ignore rules/tags listed below
 # We are curently not using:
 # - skip_ansible_lint
@@ -17,8 +16,8 @@ exclude_paths:
 # - package-latest
 # - empty-string-compare
 # - command-instead-of-shell
+# - no-changed-when
 #
 # Re-add them as needed
-skip_list:
-  - no-changed-when  # 23 failures last time I checked
-  - experimental  # 5 warnings last time I checked
+# skip_list:
+#  - experimental
