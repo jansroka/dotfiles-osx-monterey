@@ -4,20 +4,6 @@
 - name: import Spotlight maintenance tasks
   ansible.builtin.import_tasks: spotlight.yml
 
-- name: import brew maintenance tasks
-  ansible.builtin.import_tasks: brew.yml
-
-- name: Upgrade all Mac App Store apps
-  community.general.mas:
-    upgrade_all: true
-  tags: maintenance, softwareupdate
-
-- name: Check OSX softwareupdate
-  ansible.builtin.command: "softwareupdate --all --install --force"
-  register: softwareupdate
-  changed_when: "softwareupdate.rc != 0 and 'No updates are available.' not in softwareupdate.stderr"
-  tags: maintenance, softwareupdate
-
 # repair permissions
 # figure out current user id
 - name: Find user id / $(id -u)
@@ -99,10 +85,6 @@
 
 - name: Run 'yarn cache clean'
   ansible.builtin.command: yarn cache clean
-  tags: maintenance
-
-- name: Run 'gem cleanup'
-  ansible.builtin.command: gem cleanup
   tags: maintenance
 
 - name: Clear print queue

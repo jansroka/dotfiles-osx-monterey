@@ -3,5 +3,8 @@
   hosts: local
 
   roles:
+    - role: brew
+    - role: gem
+    - role: mas
+    - role: npm
     - role: maintenance
-      tags: maintenance

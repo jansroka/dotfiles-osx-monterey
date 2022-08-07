@@ -7,8 +7,6 @@
       tags: brew
     - role: dock
       tags: dock
-    - role: mas
-      tags: mas
     - role: duti
       tags: duti
     - role: gem
@@ -17,14 +15,14 @@
       tags: hazel
     - role: iterm
       tags: iterm
+    - role: mas
+      tags: mas
     - role: microsoft
       tags: microsoft
     - role: npm
       tags: npm
     - role: osx
       tags: osx
-    - role: softwareupdate
-      tags: softwareupdate
     - role: sublimetext
       tags: sublimetext
     - role: symlinks

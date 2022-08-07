@@ -52,7 +52,7 @@
 
 - name: Update & upgrade formulae
   community.general.homebrew:
-    update_community.general.homebrew: true
+    update_homebrew: true
     upgrade_all: true
   tags: brew
 
@@ -64,3 +64,23 @@
 - name: Cleanup brew
   ansible.builtin.command: brew cleanup
   tags: brew
+
+# This is not a work of art, but out of necessity. I know this can be made much nicer
+
+# delete brew caches
+# figure out cache path
+- name: Find brew cache path / $(brew --cache)
+  ansible.builtin.command: brew --cache
+  register: brewcachepath
+  tags: maintenance, softwareupdate
+
+# Run "rm -rfv {{ brewcachepath.stdout }}"
+- name: Delete brew cache
+  ansible.builtin.file:
+    path: '{{ brewcachepath.stdout }}'
+    state: absent
+  tags: maintenance, softwareupdate
+
+- name: Repair taps
+  ansible.builtin.command: brew tap --repair
+  tags: maintenance, softwareupdate

@@ -19,7 +19,7 @@
   ansible.builtin.shell: "gem outdated | sed 's/([^)]*)//g;s/  / /g' | sed 's/ //g'"
   register: outdatedgems
   changed_when: false
-  tags: gem, maintenance
+  tags: gem
 
 - name: Update all currently installed and outdated gem
   community.general.gem:
@@ -29,4 +29,8 @@
   with_items: "{{ outdatedgems.stdout_lines }}"
   register: pkg_result
   until: pkg_result is success
-  tags: gem, maintenance
+  tags: gem
+
+- name: Run 'gem cleanup'
+  ansible.builtin.command: gem cleanup
+  tags: gem
