@@ -1,22 +1,22 @@
 ---
 - name: Kill Transmission
-  command: killall Transmission
+  ansible.builtin.command: killall Transmission
   tags: osx
 
 - name: Kill Dock
-  command: killall Dock
+  ansible.builtin.command: killall Dock
   tags: osx
 
 - name: Kill Finder
-  command: killall Finder
+  ansible.builtin.command: killall Finder
   tags: osx
 
 - name: Kill Safari
-  command: killall Safari
+  ansible.builtin.command: killall Safari
   ignore_errors: true
   tags: osx
 
 - name: Kill Terminal
-  command: killall Terminal
+  ansible.builtin.command: killall Terminal
   ignore_errors: true
   tags: osx

@@ -3,7 +3,7 @@
 
 # iTerm2 will need to be restarted for preference changes to kick in.
 - name: Ensure preferences are loaded from a custom folder.
-  command: "{{ item }}"
+  ansible.builtin.command: "{{ item }}"
   with_items:
     - "defaults write com.googlecode.iterm2 'PrefsCustomFolder' -string '/Users/jan/Code/Private/dotfiles/ansible/roles/iterm/files'"
     - "defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder true"

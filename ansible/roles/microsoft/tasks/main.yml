@@ -3,7 +3,7 @@
 - name: Install required package
   ignore_errors: true
   loop: "{{ microsoft_office_packages }}"
-  homebrew_cask:
+  community.general.homebrew_cask:
     name: "{{ item }}"
     greedy: true
     options: appdir=/Applications

@@ -1,6 +1,6 @@
 ---
 - name: Symlinkg dotfiles
-  file:
+  ansible.builtin.file:
     src: "{{ symlinks_files_src_dir }}/{{ item.src }}"
     dest: "{{ item.dest }}"
     state: link

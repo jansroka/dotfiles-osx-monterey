@@ -3,7 +3,7 @@
 # We are not killing Hazel since (per Hazel's developer) a restart is not needed.
 # We simply need to make sure that the defaults we are feeding Hazel are not junk (e.g. non-existing path)
 - name: Set Hazel rules sync folder
-  osx_defaults: domain=com.noodlesoft.Hazel key={{ item.key }} type={{ item.type }} value={{ item.value }}
+  community.general.osx_defaults: domain=com.noodlesoft.Hazel key={{ item.key }} type={{ item.type }} value={{ item.value }}
   with_items:
     # Set folder where we save our rules files
     - {key: "NSNavLastRootDirectory", type: "string", value: "~/Code/Private/dotfiles/ansible/roles/hazel/files"}

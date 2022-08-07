@@ -1,13 +1,13 @@
 ---
 # from https://github.com/geerlingguy/ansible-collection-mac
 - name: Install dockutil
-  community.general.homebrew:
+  community.general.community.general.homebrew:
     name: dockutil
     state: present
   tags: dock
 
 - name: Set Dock settings
-  osx_defaults: domain=com.apple.dock key={{ item.key }} type={{ item.type }} value={{ item.value }}
+  community.general.osx_defaults: domain=com.apple.dock key={{ item.key }} type={{ item.type }} value={{ item.value }}
   with_items:
     # Enable highlight hover effect for the grid view of a stack (Dock)
     - {key: "mouse-over-hilite-stack", type: "bool", value: "true"}

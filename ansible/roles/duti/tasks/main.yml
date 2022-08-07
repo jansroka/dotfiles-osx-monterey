@@ -1,7 +1,7 @@
 ---
 # Based on https://github.com/fgimian/macbuild-ansible/blob/master/roles/default_apps/tasks/main.yaml
 - name: Ensure duti is installed
-  homebrew:
+  community.general.homebrew:
     name: duti
     state: present
   tags: duti
@@ -11,7 +11,7 @@
 # if no, keep stdout empty
 # read this into duti_output for later use
 - name: check file type association
-  command: "duti -x {{ item.1 }} | grep {{ item.0.bundle_id }}"
+  ansible.builtin.command: "duti -x {{ item.1 }} | grep {{ item.0.bundle_id }}"
   with_subelements:
     - "{{ duti_default_apps_associations }}"
     - utis
@@ -27,7 +27,7 @@
 # if we have something in item.stdout, do nothing
 # if item.stdout is empty, set assocation
 - name: update file type association
-  command: "duti -s {{ item.item.0.bundle_id }} {{ item.item.1 }} all"
+  ansible.builtin.command: "duti -s {{ item.item.0.bundle_id }} {{ item.item.1 }} all"
   with_items: "{{ duti_output.results | list }}"
   # only do this when our check in the previous task resulted in an
   # error, meaning that the association is not what we expected

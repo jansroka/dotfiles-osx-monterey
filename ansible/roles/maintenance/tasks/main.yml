@@ -2,18 +2,18 @@
 # This is not a work of art, but out of necessity. I know this can be made much nicer
 
 - name: import Spotlight maintenance tasks
-  import_tasks: spotlight.yml
+  ansible.builtin.import_tasks: spotlight.yml
 
 - name: import brew maintenance tasks
-  import_tasks: brew.yml
+  ansible.builtin.import_tasks: brew.yml
 
 - name: Upgrade all Mac App Store apps
-  mas:
+  community.general.mas:
     upgrade_all: true
   tags: maintenance, softwareupdate
 
 - name: Check OSX softwareupdate
-  command: "softwareupdate --all --install --force"
+  ansible.builtin.command: "softwareupdate --all --install --force"
   register: softwareupdate
   changed_when: "softwareupdate.rc != 0 and 'No updates are available.' not in softwareupdate.stderr"
   tags: maintenance, softwareupdate
@@ -21,38 +21,38 @@
 # repair permissions
 # figure out current user id
 - name: Find user id / $(id -u)
-  command: id -u
+  ansible.builtin.command: id -u
   register: userid
   tags: maintenance
 
 # warning: this command can not be canceled. Runtime is ca. 2 mins for 500gb
 - name: Run 'diskutil resetuserpermissions / $(id -u)'
-  command: "diskutil resetuserpermissions / {{ userid.stdout }}"
+  ansible.builtin.command: "diskutil resetuserpermissions / {{ userid.stdout }}"
   become: true
   tags: maintenance
 
 # Check disk
 # Get list with 'diskutil list'
 - name: Run 'diskutil verifyVolume /dev/disk1'
-  command: "diskutil verifyVolume /dev/disk1"
+  ansible.builtin.command: "diskutil verifyVolume /dev/disk1"
   become: true
   tags: maintenance
 
 # flush DNS
 - name: Run 'dscacheutil -flushcache && killall -HUP mDNSResponder'
-  command: "dscacheutil -flushcache && killall -HUP mDNSResponder"
+  ansible.builtin.command: "dscacheutil -flushcache && killall -HUP mDNSResponder"
   become: true
   tags: maintenance
 
 # empty all Trashes
 - name: Run 'rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash;'
-  command: "rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash;"
+  ansible.builtin.command: "rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash;"
   become: true
   tags: maintenance, skip_ansible_lint
 
 # Speed up terminal by clearing ASL logs
 - name: Run 'rm -rfv /private/var/log/asl/*.asl'
-  file:
+  ansible.builtin.file:
     path: '/private/var/log/asl/*.asl'
     state: absent
   become: true
@@ -60,13 +60,13 @@
 
 # Delete launch service quarantine (list of all files ever downloaded)
 - name: Clean up LaunchServices quarantine
-  command: "bash {{ ansible_user_dir }}/Code/private/dotfiles/bin/clean_osx_downloads.sh"
+  ansible.builtin.command: "bash {{ ansible_user_dir }}/Code/private/dotfiles/bin/clean_osx_downloads.sh"
   tags: maintenance
 
 # Reset LaunchServices db
 # Splitting this into 2 lines to stay under our line limit of 180 chars
 - name: Clean up LaunchServices to remove duplicates in the “Open With” menu
-  command: >
+  ansible.builtin.command: >
     /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister
     -kill -r -domain local -domain system -domain user && killall Finder
   become: true
@@ -74,37 +74,37 @@
 
 # Purge memory
 - name: Purge inactive memory
-  command: sudo purge
+  ansible.builtin.command: sudo purge
   become: true
   tags: maintenance
 
 # Run periodics
 - name: Run periodic scripts
-  command: sudo periodic daily weekly monthly
+  ansible.builtin.command: sudo periodic daily weekly monthly
   become: true
   tags: maintenance
 
 # - name: Delete all .DS_Store files
-#   command: find ~/ -name ".DS_Store" -exec rm {} \;
+#   ansible.builtin.command: find ~/ -name ".DS_Store" -exec rm {} \;
 #   become: true
 #   tags: maintenance
 
 # Run rm -rf ~/Library/Caches/*
 - name: Run 'rm -rf ~/Library/Caches/*'
-  file:
+  ansible.builtin.file:
     path: '~/Library/Caches/'
     state: absent
   become: true
   tags: maintenance
 
 - name: Run 'yarn cache clean'
-  command: yarn cache clean
+  ansible.builtin.command: yarn cache clean
   tags: maintenance
 
 - name: Run 'gem cleanup'
-  command: gem cleanup
+  ansible.builtin.command: gem cleanup
   tags: maintenance
 
 - name: Clear print queue
-  command: cancel -a -
+  ansible.builtin.command: cancel -a -
   tags: maintenance

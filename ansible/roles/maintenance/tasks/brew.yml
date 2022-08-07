@@ -3,35 +3,35 @@
 
 # update & upgrade
 - name: Update & upgrade brew formulae
-  homebrew:
-    update_homebrew: true
+  community.general.homebrew:
+    update_community.general.homebrew: true
     upgrade_all: true
   tags: maintenance, softwareupdate
 
 - name: Update & upgrade brew casks
-  homebrew_cask:
+  community.general.homebrew_cask:
     upgrade_all: true
   tags: maintenance, softwareupdate
 
 # cleanup
 - name: Cleanup brew
-  command: brew cleanup --prune=all -s
+  ansible.builtin.command: brew cleanup --prune=all -s
   tags: maintenance, softwareupdate
 
 # delete brew caches
 # figure out cache path
 - name: Find brew cache path / $(brew --cache)
-  command: brew --cache
+  ansible.builtin.command: brew --cache
   register: brewcachepath
   tags: maintenance, softwareupdate
 
 # Run "rm -rfv {{ brewcachepath.stdout }}"
 - name: Delete brew cache
-  file:
+  ansible.builtin.file:
     path: '{{ brewcachepath.stdout }}'
     state: absent
   tags: maintenance, softwareupdate
 
 - name: Repair taps
-  command: brew tap --repair
+  ansible.builtin.command: brew tap --repair
   tags: maintenance, softwareupdate

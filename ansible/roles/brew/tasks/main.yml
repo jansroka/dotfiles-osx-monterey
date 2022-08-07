@@ -1,12 +1,12 @@
 ---
 - name: Configure Homebrew taps
-  homebrew_tap:
+  community.general.homebrew_tap:
     name: "{{ item }}"
   loop: "{{ brew_taps }}"
   tags: brew
 
 - name: Get list of already installed Homebrew formulae
-  command: brew leaves
+  ansible.builtin.command: brew leaves
   register: brew_output
   tags: brew
 
@@ -15,7 +15,7 @@
 #  tags: brew
 
 - name: Install Homebrew formulae (skip if already installed)
-  homebrew:
+  community.general.homebrew:
     name: "{{ item }}"
     state: present
   loop: "{{ brew_packages }}"
@@ -23,7 +23,7 @@
   tags: brew
 
 - name: Get list of already installed Homebrew casks
-  command: brew list --cask
+  ansible.builtin.command: brew list --cask
   register: cask_output
   tags: brew
 
@@ -32,7 +32,7 @@
 #  tags: brew
 
 - name: Install Homebrew casks (skip if already installed)
-  homebrew_cask:
+  community.general.homebrew_cask:
     name: "{{ item }}"
     greedy: true
     state: present
@@ -42,7 +42,7 @@
   tags: brew
 
 - name: Install QuickLook plugins (skip if already installed)
-  homebrew_cask:
+  community.general.homebrew_cask:
     name: "{{ item }}"
     state: latest
   ignore_errors: true
@@ -51,16 +51,16 @@
   tags: brew
 
 - name: Update & upgrade formulae
-  homebrew:
-    update_homebrew: true
+  community.general.homebrew:
+    update_community.general.homebrew: true
     upgrade_all: true
   tags: brew
 
 - name: Update & upgrade casks
-  homebrew_cask:
+  community.general.homebrew_cask:
     upgrade_all: true
   tags: brew
 
 - name: Cleanup brew
-  command: brew cleanup
+  ansible.builtin.command: brew cleanup
   tags: brew

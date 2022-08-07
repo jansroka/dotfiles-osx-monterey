@@ -6,8 +6,10 @@
     - eslint
     - joi
     - jshint
+    - license-checker
     - netlify-cli
     - npm-upgrade
+    - npm-check
     - npm
     - prettier
     - yarn
