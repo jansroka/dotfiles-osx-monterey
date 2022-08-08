@@ -8,7 +8,7 @@ These are my dotfiles. There are many like them, but these ones are mine.
 
 ## Available ansible roles
 - brew
-	- configures homebrew includings casks (runtime: a few minutes)
+	- configurdes homebrew includings casks & Microsoft Office (runtime: a few minutes)
 - dock
 	- configure your OSX dock (runtime: < 1 min)
 - duti
@@ -21,8 +21,6 @@ These are my dotfiles. There are many like them, but these ones are mine.
 	- runs a few maintenance tasks like repairPermissions, verifyVolume (runtime: several minutes)
 - mas
 	- takes care of apps installed via Mac App Store (runtime: 1 min)
-- microsoft
-	- installs Microsoft Office incl. OneDrive, Teams, Remote Desktop (runtime: a few mins)
 - npm
 	- install the few global npm packages that I use (runtime: a few secs)
 - osx
@@ -56,18 +54,18 @@ curl -L https://raw.github.com/jansroka/dotfiles/master/bin/setup.sh | bash
 ```
 Make sure to read the code before running.
 
-## How to run with options
+## How to run the whole thing for setup
 ```
 time ANSIBLE_CONFIG=./ansible/ansible.cfg ansible-playbook -i ansible/hosts ansible/dotfiles.yml -v --ask-become-pass
 ```
 
-## How to run the maintenance playbook only for softwareupdates
+## How to run the update playbook only for softwareupdates
 Run this:
 ```
-time ANSIBLE_CONFIG=./ansible/ansible.cfg ansible-playbook -i ./ansible/hosts ./ansible/maintenance.yml -v --ask-become-pass --tags softwareupdate
+time ANSIBLE_CONFIG=./ansible/ansible.cfg ansible-playbook -i ./ansible/hosts ./ansible/update.yml -v --ask-become-pass
 ```
 
-## How to run the full maintenance playbook
+## How to run the maintenance playbook
 Run this:
 ```
 time ANSIBLE_CONFIG=./ansible/ansible.cfg ansible-playbook -i ./ansible/hosts ./ansible/maintenance.yml -v --ask-become-pass

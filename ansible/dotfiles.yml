@@ -17,8 +17,6 @@
       tags: iterm
     - role: mas
       tags: mas
-    - role: microsoft
-      tags: microsoft
     - role: npm
       tags: npm
     - role: osx

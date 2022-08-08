@@ -1,5 +1,5 @@
 ---
-- name: Run maintenance
+- name: Run updates
   hosts: local
 
   roles:
@@ -7,4 +7,3 @@
     - role: gem
     - role: mas
     - role: npm
-    - role: maintenance
