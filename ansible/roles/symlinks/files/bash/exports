@@ -17,6 +17,8 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 export HOMEBREW_CASK_OPTS="--appdir=/Applications --fontdir=/Library/Fonts --qlplugindir=/Library/QuickLook"
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_INSECURE_REDIRECT=1
+export HOMEBREW_NO_INSTALL_CLEANUP=1
+
 # shellcheck disable=SC2155
 export PATH=$(brew --prefix)/bin:$(brew --prefix)/sbin:$PATH
 # path for Homebrew coreutils$(brew --prefix coreutils)/libexec/gnubin
@@ -33,7 +35,6 @@ export HISTFILESIZE="${HISTSIZE}";
 export HISTCONTROL='ignoreboth';
 export HISTTIMEFORMAT="%Y-%m-%d %T "
 
-
 # Prefer US English and use UTF-8.
 export LANG='en_US.UTF-8';
 export LC_ALL='en_US.UTF-8';
@@ -44,6 +45,26 @@ export MANPAGER='less -X';
 
 # ruby
 export PATH=/Users/jan/.rbenv/shims:$PATH
+export optflags="-Wno-error=implicit-function-declaration"
+export CFLAGS="-Wno-error=implicit-function-declaration"
+export LDFLAGS="-L/usr/local/opt/libffi/lib $LDFLAGS"
+export CPPFLAGS="-I/usr/local/opt/libffi/include $CPPFLAGS"
+export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig:$PKG_CONFIG_PATH"
+export CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+
+# ruby-build
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1) --with-readline-dir=$(brew --prefix readline) --with-libyaml-dir=$(brew --prefix libyaml) --with-zlib-dir=$(brew --prefix zlib)"
+
+# ruby - readline needs this
+export LDFLAGS="-L/usr/local/opt/readline/lib $LDFLAGS"
+export CPPFLAGS="-I/usr/local/opt/readline/include $CPPFLAGS"
+export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig:$PKG_CONFIG_PATH"
+
+# ruby  - openssl needs this
+export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib $LDFLAGS"
+export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include $CPPFLAGS"
+export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
 #pyenv for python
 export PYENV_ROOT="$HOME/.pyenv"
