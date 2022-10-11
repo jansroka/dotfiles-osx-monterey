@@ -39,13 +39,13 @@ brew_packages:
   - postgresql
   - pre-commit
   - pyenv
+  - python@3.9
   - rbenv
   - redis
   - rsync
   - ruby
   - ruby-build
   - shellcheck
-  - ssh-copy-id
   - stripe/stripe-cli/stripe
   - tidy-html5
   - tree
@@ -60,6 +60,7 @@ brew_packages:
 cask_packages:
   - 1password
   - arq
+  - authy
   - chromedriver
   - cyberduck
   - dropbox
