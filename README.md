@@ -31,6 +31,7 @@ These are my dotfiles. There are many like them, but these ones are mine.
 	- install via brew cask & symlink (runtime:  < 1 min)
 - symlinks
 	- softlink a bunch of config files in to ```~/```(runtime: seconds)
+	- Jan ist ein netter Kerl
 
 ## Getting started
 You’ll need the following dependencies before getting started.
