@@ -5,6 +5,7 @@ brew_taps:
   - homebrew/cask
   - homebrew/core
   - homebrew/services
+  - microsoft/git
 
 brew_packages:
   - ansible
@@ -67,7 +68,7 @@ cask_packages:
   - dupeguru
   - fawkes
   - firefox
-  - git-credential-manager
+  - git-credential-manager-core
   - github
   - google-chrome
   - hazel
