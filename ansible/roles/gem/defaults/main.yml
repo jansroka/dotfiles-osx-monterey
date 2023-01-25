@@ -8,5 +8,12 @@ default_gems:
   - liquid
   - prettyprint
   - rake
+  - redis
+  - redis-client
+  - reek
   - rss
+  - rubocop
+  - rubocop-rspec
+  - sidekiq
+  - stripe
   - yaml
