@@ -12,7 +12,6 @@ duti_default_apps_associations:
   # Sublime text
   - bundle_id: com.sublimetext.4
     utis:
-      - public.source-code
       - public.json
       - public.text
       - public.yaml
@@ -32,7 +31,6 @@ duti_default_apps_associations:
       - .rar
       # - .tar  # we can't use zip, it's protected by OSX
       - .7z
-      - .bzip2
 
   # Preview
   - bundle_id: com.apple.Preview
