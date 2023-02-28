@@ -14,3 +14,5 @@ symlinks:
   - {src: "bash/exports", dest: "~/.exports"}
   # nano
   - {src: "nano/nanorc", dest: "~/.nanorc"}
+  # python
+  - {src: "/Users/jan/.pyenv/shims/python", dest: "/usr/local/bin/python3"}
