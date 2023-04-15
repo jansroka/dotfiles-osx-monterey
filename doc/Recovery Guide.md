@@ -105,9 +105,6 @@ This will very likely require a reboot.
 - Add License
 - Login to OmniSync
 
-### SourceTree
-- Add repos from GitHub
-
 ### Spotify
 - Login & start listening to some tune while you work
 
