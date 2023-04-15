@@ -1,12 +1,17 @@
 ---
+
+# These can be listed with `brew tap`
 brew_taps:
   - heroku/brew
   - homebrew/bundle
   - homebrew/cask
   - homebrew/core
   - homebrew/services
+  - lotyp/formulae # needed for dockutil
   - microsoft/git
+  - stripe/stripe-cli
 
+# Installed formula can be listed with `brew list --formula -1`
 brew_packages:
   - ansible
   - ansible-lint
