@@ -94,6 +94,7 @@ cask_packages:
   - simple-comic
   - skype
   - slack
+  - sloth
   - spotify
   - sublime-text
   - superduper
