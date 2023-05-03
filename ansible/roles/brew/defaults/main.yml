@@ -87,6 +87,7 @@ cask_packages:
   - netnewswire
   - ngrok
   - omnifocus
+  - redisinsight
   - scrivener
   - sequential
   - signal
