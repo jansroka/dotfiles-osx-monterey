@@ -66,6 +66,7 @@ cask_packages:
   - cyberduck
   - docker
   - dupeguru
+  - element
   - fawkes
   - firefox
   - git-credential-manager-core
