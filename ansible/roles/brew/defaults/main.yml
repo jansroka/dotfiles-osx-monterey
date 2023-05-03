@@ -64,6 +64,7 @@ cask_packages:
   - authy
   - chromedriver
   - cyberduck
+  - docker
   - dupeguru
   - fawkes
   - firefox
