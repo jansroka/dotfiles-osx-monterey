@@ -4,17 +4,18 @@
   ansible.builtin.command: hostname
   register: current_hostname
   changed_when: false
-  tags: osx
+  tags: osx, osx-hostname
 
 - name: Set computer name
   ansible.builtin.command: "scutil --set {{ item }} Zeitgeist"
   loop:
     - ComputerName
     - LocalHostName
+    - HostName
   become: true
   become_user: root
   when: current_hostname.stdout != "Zeitgeist"
-  tags: osx
+  tags: osx, osx-hostname
 
 - name: Defaults host name
   community.general.osx_defaults:
@@ -24,4 +25,4 @@
     value: "Zeitgeist"
   become: true
   become_user: root
-  tags: osx
+  tags: osx, osx-hostname
