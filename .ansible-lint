@@ -21,7 +21,7 @@ skip_list:
 # - command-instead-of-shell
 - no-changed-when
 - name[template]
-- name[casing]
+# - name[casing]
 - args[module]
 #
 # Re-add them as needed
