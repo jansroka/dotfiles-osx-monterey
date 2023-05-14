@@ -21,6 +21,8 @@
       tags: npm
     - role: osx
       tags: osx
+    - role: pip
+      tags: pip
     - role: sublimetext
       tags: sublimetext
     - role: symlinks
