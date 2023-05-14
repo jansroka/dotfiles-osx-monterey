@@ -20,7 +20,7 @@ skip_list:
 # - empty-string-compare
 # - command-instead-of-shell
 - no-changed-when
-- name[template]
+# - name[template]
 # - name[casing]
 - args[module]
 #
