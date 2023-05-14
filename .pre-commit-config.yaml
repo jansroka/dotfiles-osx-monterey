@@ -1,5 +1,5 @@
 ---
-# Ruzn ```pre-commit autoupdate``` to bump the rev's.
+# Run ```pre-commit autoupdate``` to bump the rev's.
 # By default, this will bring the hooks to the latest tag on the default branch.
 repos:
   - repo: https://github.com/ansible/ansible-lint.git
