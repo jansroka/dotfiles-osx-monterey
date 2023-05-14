@@ -6,7 +6,7 @@ repos:
     rev: v6.16.0
     hooks:
       - id: ansible-lint
-        entry: ansible-lint --nocolor
+        entry: ansible-lint --nocolor -c .ansible-lint
         files: \.(yaml|yml)$
         language: python
         always_run: true
