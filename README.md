@@ -25,6 +25,8 @@ These are my dotfiles. There are many like them, but these ones are mine.
 	- install the few global npm packages that I use (runtime: a few secs)
 - osx
 	- set lots of defaults for OSX and OSX apps (runtime: < 1 min)
+- pip
+	- install and maintain pip modules (runtime: < 1 min)
 - softwareupdate
 	- check ```softwareupdate```for things we might need to install (runtime: seconds ideally)
 - sublime-text
