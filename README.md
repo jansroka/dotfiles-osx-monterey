@@ -4,7 +4,7 @@ These are my dotfiles. There are many like them, but these ones are mine.
 ## Features
 - super simple setup
 - uses ansible and is idempotent
-- keeps ```~/```clean
+- keeps ```~/``` clean
 
 ## Available ansible roles
 - brew
@@ -28,11 +28,11 @@ These are my dotfiles. There are many like them, but these ones are mine.
 - pip
 	- install and maintain pip modules (runtime: < 1 min)
 - softwareupdate
-	- check ```softwareupdate```for things we might need to install (runtime: seconds ideally)
+	- check ```softwareupdate``` for things we might need to install (runtime: seconds ideally)
 - sublime-text
 	- install via brew cask & symlink (runtime:  < 1 min)
 - symlinks
-	- softlink a bunch of config files in to ```~/```(runtime: seconds)
+	- softlink a bunch of config files in to ```~/``` (runtime: seconds)
 
 ## Getting started
 You’ll need the following dependencies before getting started.
@@ -74,7 +74,7 @@ time ANSIBLE_CONFIG=./ansible/ansible.cfg ansible-playbook -i ./ansible/hosts ./
 ```
 
 ## How to make changes to this repo // pre-commit hooks
-I am using ```pre-commit```in this repo to lint before commits. Install it via brew using
+I am using ```pre-commit``` in this repo to lint before commits. Install it via brew using
 ```
 brew install pre-commit
 ```
