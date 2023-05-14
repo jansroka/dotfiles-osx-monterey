@@ -1,0 +1,9 @@
+---
+default_pip_modules:
+  - ansible-core
+  - ansible-lint
+  - pip
+  - pip-autoremove
+  - pip-check
+  - requests
+  - yamllint
