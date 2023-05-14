@@ -15,7 +15,7 @@ skip_list:
 # - skip_ansible_lint
 - ignore-errors
 - no-free-form
-- risky-shell-pipe
+# - risky-shell-pipe
 - package-latest
 # - empty-string-compare
 # - command-instead-of-shell
