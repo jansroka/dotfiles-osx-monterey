@@ -13,16 +13,17 @@ exclude_paths:
 # We are curently not using:
 skip_list:
 # - skip_ansible_lint
+- experimental
 - ignore-errors
 - no-free-form
 # - risky-shell-pipe
-- package-latest
+# - package-latest
 # - empty-string-compare
 # - command-instead-of-shell
 - no-changed-when
 # - name[template]
 # - name[casing]
-- args[module]
+# - args[module] #experimental
 #
 # Re-add them as needed
 # skip_list:
