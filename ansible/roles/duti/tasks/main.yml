@@ -10,7 +10,7 @@
 # if yes, write into stdout
 # if no, keep stdout empty
 # read this into duti_output for later use
-- name: check file type association
+- name: Check file type association
   ansible.builtin.command: "duti -x {{ item.1 }} | grep {{ item.0.bundle_id }}"
   with_subelements:
     - "{{ duti_default_apps_associations }}"
@@ -26,7 +26,7 @@
 
 # if we have something in item.stdout, do nothing
 # if item.stdout is empty, set assocation
-- name: update file type association
+- name: Update file type association
   ansible.builtin.command: "duti -s {{ item.item.0.bundle_id }} {{ item.item.1 }} all"
   with_items: "{{ duti_output.results | list }}"
   # only do this when our check in the previous task resulted in an

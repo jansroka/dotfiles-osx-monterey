@@ -1,7 +1,7 @@
 ---
 # This is not a work of art, but out of necessity. I know this can be made much nicer
 
-- name: import Spotlight maintenance tasks
+- name: Import Spotlight maintenance tasks
   ansible.builtin.import_tasks: spotlight.yml
 
 # repair permissions
