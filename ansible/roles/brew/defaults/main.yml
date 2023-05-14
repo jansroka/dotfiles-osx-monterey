@@ -8,6 +8,7 @@ brew_taps:
   - microsoft/git
 
 brew_packages:
+  - ansible
   - autoconf
   - automake
   - awscli
