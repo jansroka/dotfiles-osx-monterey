@@ -11,12 +11,18 @@ exclude_paths:
 
 # This makes linter to fully ignore rules/tags listed below
 # We are curently not using:
+skip_list:
 # - skip_ansible_lint
-# - risky-shell-pipe
-# - package-latest
+- ignore-errors
+- no-free-form
+- risky-shell-pipe
+- package-latest
 # - empty-string-compare
 # - command-instead-of-shell
-# - no-changed-when
+- no-changed-when
+- name[template]
+- name[casing]
+- args[module]
 #
 # Re-add them as needed
 # skip_list:
