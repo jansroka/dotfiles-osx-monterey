@@ -15,6 +15,7 @@ skip_list:
 # - skip_ansible_lint
 - experimental
 - ignore-errors
+# Need to skip this or else our OSX defaults plays don't pass
 - no-free-form
 # - risky-shell-pipe
 # - package-latest
