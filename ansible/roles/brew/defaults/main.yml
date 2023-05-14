@@ -8,8 +8,6 @@ brew_taps:
   - microsoft/git
 
 brew_packages:
-  - ansible
-  - ansible-lint
   - autoconf
   - automake
   - awscli
@@ -53,7 +51,6 @@ brew_packages:
   - unbound
   - wget
   - wifi-password
-  - yamllint
   - yq
   - zlib
   - zsh
