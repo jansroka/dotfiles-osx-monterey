@@ -1,6 +1,6 @@
 ---
 - name: Get all currently installed gem
-  ansible.builtin.shell: "gem list | sed 's/([^)]*)//g;s/  / /g' | sed 's/ //g'"
+  ansible.builtin.shell: "set -o pipefail && gem list | sed 's/([^)]*)//g;s/  / /g' | sed 's/ //g'"
   register: installedgems
   changed_when: false
   tags: gem
@@ -16,7 +16,7 @@
   tags: gem
 
 - name: Get all currently installed and outdated gem
-  ansible.builtin.shell: "gem outdated | sed 's/([^)]*)//g;s/  / /g' | sed 's/ //g'"
+  ansible.builtin.shell: "set -o pipefail && gem outdated | sed 's/([^)]*)//g;s/  / /g' | sed 's/ //g'"
   register: outdatedgems
   changed_when: false
   tags: gem
