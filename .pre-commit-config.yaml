@@ -3,7 +3,7 @@
 # By default, this will bring the hooks to the latest tag on the default branch.
 repos:
   - repo: https://github.com/ansible/ansible-lint.git
-    rev: v5.2.1
+    rev: v6.16.0
     hooks:
       - id: ansible-lint
         entry: ansible-lint --nocolor
@@ -19,7 +19,7 @@ repos:
           - yamllint
 
   - repo: https://github.com/adrienverge/yamllint.git
-    rev: v1.26.3
+    rev: v1.31.0
     hooks:
       - id: yamllint
         files: \.(yaml|yml)$
