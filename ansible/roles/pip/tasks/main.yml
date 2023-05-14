@@ -25,7 +25,7 @@
   changed_when: false
   tags: pip
 
-- name: Update all currently installed and outdated pip modukes
+- name: Update all currently installed and outdated pip modules
   ansible.builtin.pip:
     name: "{{ item }}"
     state: latest
