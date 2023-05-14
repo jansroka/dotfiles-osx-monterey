@@ -3,7 +3,7 @@
   community.general.npm:
     name: "{{ item }}"
     state: present
-    global: yes
+    global: true
   with_items:
     - browser-sync
     - eslint

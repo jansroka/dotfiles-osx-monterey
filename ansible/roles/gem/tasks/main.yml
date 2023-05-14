@@ -9,8 +9,8 @@
   community.general.gem:
     name: "{{ item }}"
     state: present
-    user_install: no
-    norc: yes
+    user_install: false
+    norc: true
   loop: "{{ default_gems }}"
   when: item not in installedgems.stdout
   tags: gem
@@ -25,7 +25,7 @@
   community.general.gem:
     name: "{{ item }}"
     state: latest
-    norc: yes
+    norc: true
   with_items: "{{ outdatedgems.stdout_lines }}"
   register: pkg_result
   until: pkg_result is success
