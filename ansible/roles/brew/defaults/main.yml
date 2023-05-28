@@ -2,8 +2,6 @@
 brew_taps:
   - heroku/brew
   - homebrew/bundle
-  - homebrew/cask
-  - homebrew/core
   - homebrew/services
   - microsoft/git
 
