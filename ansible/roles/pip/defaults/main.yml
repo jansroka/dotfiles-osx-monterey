@@ -1,10 +1,13 @@
 ---
 default_pip_modules:
-  - ansible-core
-  - ansible-lint
+  # Don't install via pip, we install this via brew
+  # - ansible-core
+  # Don't install via pip, we install this via brew
+  # - ansible-lint
   - pip
   - pip-autoremove
   - pip-check
   - pycodestyle
   - requests
-  - yamllint
+  # Don't install via pip, we install this via brew
+  # - yamllint
