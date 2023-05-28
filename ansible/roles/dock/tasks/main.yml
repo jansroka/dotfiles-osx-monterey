@@ -25,12 +25,12 @@
 
 - name: Remove configured Dock items.
   ansible.builtin.include_tasks: dock-remove.yml
-  loop: "{{ dockitems_remove }}"
+  loop: "{{ dock_items_remove }}"
   tags: dock
 
 - name: Ensure required dock items exist.
   ansible.builtin.include_tasks: dock-add.yml
-  loop: "{{ dockitems_persist }}"
+  loop: "{{ dock_items_persist }}"
   tags: dock
 
 - name: Ensure dock items are in correct position.
@@ -38,5 +38,5 @@
   when:
     - item.pos is defined
     - item.pos > 0
-  loop: "{{ dockitems_persist }}"
+  loop: "{{ dock_items_persist }}"
   tags: dock

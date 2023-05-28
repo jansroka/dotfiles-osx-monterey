@@ -2,7 +2,7 @@
 dock_icon_size: 70
 
 # Dock items to remove.
-dockitems_remove:
+dock_items_remove:
  - TV
  - Podcasts
  - 'App Store'
@@ -22,7 +22,7 @@ dockitems_remove:
 
 # Dock items to add. `pos` parameter is optional and will place the Dock item
 # in a particular position in the Dock.
-dockitems_persist:
+dock_items_persist:
  - name: "Firefox"
    path: "/Applications/Firefox.app/"
    pos: 2

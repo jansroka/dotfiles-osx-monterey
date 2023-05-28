@@ -9,9 +9,9 @@
 
 - name: Get current dock item position from output.
   ansible.builtin.set_fact:
-    current_position: "{{ dock_item_position | regex_replace('^.*slot (.*) in.*$', '\\1') }}"
+    dock_current_position: "{{ dock_item_position | regex_replace('^.*slot (.*) in.*$', '\\1') }}"
 
 - name: Move dock item to the correct position.
   ansible.builtin.command:
     cmd: dockutil --move '{{ item.name | default(item) }}' --position '{{ item.pos }}'
-  when: current_position|int != item.pos|int
+  when: dock_current_position|int != item.pos|int

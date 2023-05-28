@@ -2,7 +2,7 @@
 # from https://github.com/soehlert/osx-ansible/blob/master/roles/osx_base/tasks/main.yml
 - name: Check hostname
   ansible.builtin.command: hostname
-  register: current_hostname
+  register: osx_current_hostname
   changed_when: false
   tags: osx, osx-hostname
 
@@ -14,7 +14,7 @@
     - HostName
   become: true
   become_user: root
-  when: current_hostname.stdout != "Zeitgeist"
+  when: osx_current_hostname.stdout != "Zeitgeist"
   tags: osx, osx-hostname
 
 - name: Defaults host name

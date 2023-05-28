@@ -8,7 +8,7 @@
 # figure out current user id
 - name: Find user id / $(id -u)
   ansible.builtin.command: id -u
-  register: userid
+  register: maintenance_userid
   tags: maintenance
 
 # warning: this command can not be canceled. Runtime is ca. 2 mins for 500gb

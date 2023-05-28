@@ -54,7 +54,7 @@ brew_packages:
   - zlib
   - zsh
 
-cask_packages:
+brew_cask_packages:
   - 1password
   - arq
   - authy
@@ -107,7 +107,7 @@ cask_packages:
   - xmind
   - zoom
 
-cask_ql_packages:
+brew_cask_ql_packages:
   - qlcolorcode
   - qlimagesize
   - qlmarkdown

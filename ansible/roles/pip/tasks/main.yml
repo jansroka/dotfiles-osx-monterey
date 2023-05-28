@@ -1,7 +1,7 @@
 ---
 - name: Get all currently installed pip modules
   ansible.builtin.shell: "set -o pipefail && pip list | tail -n +3 | awk '{ print $1 }'"
-  register: installedpipmodules
+  register: pip_installedmodules
   changed_when: false
   tags: pip
 
@@ -15,13 +15,13 @@
   ansible.builtin.pip:
     name: "{{ item }}"
     state: present
-  loop: "{{ default_pip_modules }}"
-  when: item not in installedpipmodules.stdout
+  loop: "{{ pip_default_modules }}"
+  when: item not in pip_installedmodules.stdout
   tags: pip
 
 - name: Get all currently installed and outdated pip modules
   ansible.builtin.shell: "set -o pipefail && pip list --outdated | tail -n +3 | awk '{ print $1 }'"
-  register: outdatedpipmodules
+  register: pip_outdatedmodules
   changed_when: false
   tags: pip
 
@@ -29,7 +29,7 @@
   ansible.builtin.pip:
     name: "{{ item }}"
     extra_args: --upgrade
-  with_items: "{{ outdatedpipmodules.stdout_lines }}"
-  register: pkg_result
-  until: pkg_result is success
+  with_items: "{{ pip_outdatedmodules.stdout_lines }}"
+  register: pip_pkg_result
+  until: pip_pkg_result is success
   tags: pip
