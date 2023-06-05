@@ -38,7 +38,7 @@
     state: present
   ignore_errors: true
   loop: "{{ brew_cask_packages }}"
-  when: item not in cask_output.stdout
+  when: item not in brew_cask_output.stdout
   tags: brew
 
 - name: Install QuickLook plugins (skip if already installed)
@@ -46,7 +46,7 @@
     name: "{{ item }}"
     state: latest
   ignore_errors: true
-  when: item not in cask_output.stdout
+  when: item not in brew_cask_output.stdout
   loop: "{{ brew_cask_ql_packages }}"
   tags: brew
 
