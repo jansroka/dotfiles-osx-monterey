@@ -12,20 +12,20 @@ exclude_paths:
 # This makes linter to fully ignore rules/tags listed below
 # We are curently not using:
 skip_list:
-# - skip_ansible_lint
-- experimental
-- ignore-errors
-# Need to skip this or else our OSX defaults plays don't pass
-- no-free-form
-# - risky-shell-pipe
-# - package-latest
-# - empty-string-compare
-# - command-instead-of-shell
-- no-changed-when
-# - name[template]
-# - name[casing]
-# - args[module] #experimental
-#
-# Re-add them as needed
-# skip_list:
-#  - experimental
+  # - skip_ansible_lint
+  - experimental
+  - ignore-errors
+  # Need to skip this or else our OSX defaults plays don't pass
+  - no-free-form
+  # - risky-shell-pipe
+  # - package-latest
+  # - empty-string-compare
+  # - command-instead-of-shell
+  - no-changed-when
+  # - name[template]
+  # - name[casing]
+  # - args[module] #experimental
+  #
+  # Re-add them as needed
+  # skip_list:
+  #  - experimental
