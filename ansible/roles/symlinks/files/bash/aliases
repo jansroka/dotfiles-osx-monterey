@@ -84,13 +84,13 @@ alias veracrypt='/Applications/VeraCrypt.app/Contents/MacOS/Veracrypt'
 alias gst='clear && git status'
 
 # daito docker
-alias daitoapp='cd ~/Code/Daito/Code/app'
-alias daitoattach='cd ~/Code/Daito/Code/app && d attach web'
-alias daitobash='cd ~/Code/Daito/Code/app && dcr web bash'
-alias daitoconsole='cd ~/Code/Daito/Code/app && dcr web rails c'
-alias daitodown='cd ~/Code/Daito/Code/app && dcd'
+alias daitoapp='cd ~/Code/Daito/app'
+alias daitoattach='cd ~/Code/Daito/app && d attach web'
+alias daitobash='cd ~/Code/Daito/app && dcr web bash'
+alias daitoconsole='cd ~/Code/Daito/app && dcr web rails c'
+alias daitodown='cd ~/Code/Daito/app && dcd'
 alias daitotest='cd ~/Code/Daito/app && dcr web ./scripts/fluffy.sh'
-alias daitoup='cd ~/Code/Daito/Code/app && dcu'
+alias daitoup='cd ~/Code/Daito/app && dcu'
 alias daitoupb='cd ~/Code/Daito/app && dcub'
 alias d="docker"
 alias dcb="docker compose build"
