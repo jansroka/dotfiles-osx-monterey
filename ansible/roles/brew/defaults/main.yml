@@ -6,6 +6,7 @@ brew_taps:
   - microsoft/git
 
 brew_packages:
+  - act
   - ansible
   - autoconf
   - automake
