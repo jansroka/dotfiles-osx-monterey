@@ -94,11 +94,15 @@ alias daitoup='cd ~/Code/Daito/app && dcu'
 alias daitoupb='cd ~/Code/Daito/app && dcub'
 alias d="docker"
 alias dcb="docker compose build"
-alias dcd="docker compose down && docker system prune --volumes -f"
+alias dcd="docker compose down --remove-orphans && docker system prune --volumes -f"
 alias dce="docker compose exec"
-alias dcr="docker compose run --rm"
+alias dcr="docker compose run -it --rm"
 alias dcu="docker compose up"
-alias dcub="docker compose up --build"
+alias dcub="docker compose up --build --force-recreate"
 
 # vscode
-code='/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron'
+alias code='/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron'
+
+# ansible
+# make sure we add the ssh key to ssh-agent so that we have to enter the ssh key password only once
+alias ansible-playbook='ssh-add -l > /dev/null  || ssh-add ~/.ssh/id_dto-retool-upcloud && ansible-playbook'
