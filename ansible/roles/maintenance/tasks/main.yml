@@ -13,7 +13,7 @@
 
 # warning: this command can not be canceled. Runtime is ca. 2 mins for 500gb
 - name: Run 'diskutil resetuserpermissions / $(id -u)'
-  ansible.builtin.command: "diskutil resetuserpermissions / {{ userid.stdout }}"
+  ansible.builtin.command: "diskutil resetuserpermissions / {{ maintenance_userid.stdout }}"
   become: true
   tags: maintenance
 
