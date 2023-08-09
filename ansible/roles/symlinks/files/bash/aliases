@@ -98,6 +98,7 @@ alias dcd="docker compose down --remove-orphans && docker system prune --volumes
 alias dce="docker compose exec"
 alias dcr="docker compose run -it --rm"
 alias dcu="docker compose up"
+#alias dcub="docker image prune -af && docker buildx build -t daito-web:latest --force-rm --rm --pull=false -f Dockerfile.web . && docker compose up --build --force-recreate --remove-orphans"
 alias dcub="docker compose up --build --force-recreate"
 
 # vscode
@@ -105,4 +106,4 @@ alias code='/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron'
 
 # ansible
 # make sure we add the ssh key to ssh-agent so that we have to enter the ssh key password only once
-alias ansible-playbook='ssh-add -l > /dev/null  || ssh-add ~/.ssh/id_dto-retool-upcloud && ansible-playbook'
+#alias ansible-playbook='ssh-add -l > /dev/null  || ssh-add ~/.ssh/id_dto-retool-upcloud && ansible-playbook'
