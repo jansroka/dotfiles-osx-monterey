@@ -7,15 +7,17 @@ if [ "$ITERM_SESSION_ID" ]; then
 fi
 
 # prompt
-export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
-export CLICOLOR=1
+#export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+#export CLICOLOR=1
+#
+# That was my old prompt. My current prompt is defined in ``.prompt``.
 
 # ls
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
 # brew related
 export HOMEBREW_CASK_OPTS="--appdir=/Applications --fontdir=/Library/Fonts --qlplugindir=/Library/QuickLook"
-export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_ANALYTICS=0
 export HOMEBREW_NO_INSECURE_REDIRECT=1
 export HOMEBREW_NO_INSTALL_CLEANUP=1
 
@@ -77,6 +79,11 @@ export PATH="/usr/local/opt/postgresql@15/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/postgresql@15/lib $LDFLAGS"
 export CPPFLAGS="-I/usr/local/opt/postgresql@15/include $CPPFLAGS"
 export PKG_CONFIG_PATH="/usr/local/opt/postgresql@15/lib/pkgconfig"
+# libq
+export PATH="/usr/local/opt/libpq/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/libpq/lib"
+export CPPFLAGS="-I/usr/local/opt/libpq/include"
+export PKG_CONFIG_PATH="/usr/local/opt/libpq/lib/pkgconfig"
 
 # Fix Ansible
 export ANSIBLE_PYTHON_INTERPRETER="$(which python)"
@@ -96,9 +103,9 @@ export PATH="$PATH:./node_modules/.bin"
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 
-
 # remove duplicate PATH entries
-PATH=$(echo "$PATH" | awk -v RS=':' -v ORS=":" '!a[$1]++{if (NR > 1) printf ORS; printf $a[$1]}')
+# and finally export one last time
+export PATH=$(echo "$PATH" | awk -v RS=':' -v ORS=":" '!a[$1]++{if (NR > 1) printf ORS; printf $a[$1]}')
 
 # dump your path like this
 # echo $PATH | tr ':' '\n'. | sort
