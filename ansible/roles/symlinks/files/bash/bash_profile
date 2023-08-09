@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 # Load the shell dotfiles
-for file in ~/.{exports,aliases}; do
-	# Can't figure out how to fix this, therefore let's disable shellcheck for this line
+for file in ~/.{exports,aliases,prompt}; do
 	# shellcheck disable=SC1090
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;

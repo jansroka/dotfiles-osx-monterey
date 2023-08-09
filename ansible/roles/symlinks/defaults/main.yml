@@ -12,5 +12,6 @@ symlinks:
   - {src: "bash/bash_profile", dest: "~/.bash_profile"}
   - {src: "bash/bashrc", dest: "~/.bashrc"}
   - {src: "bash/exports", dest: "~/.exports"}
+  - {src: "bash/prompt", dest: "~/.prompt"}
   # nano
   - {src: "nano/nanorc", dest: "~/.nanorc"}
