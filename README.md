@@ -1,3 +1,15 @@
+# Archive Repository
+
+This repo served me well, for years. But since I have moved on from OSX Monterey to OSX Ventura in September 2023, this repo is now archived. Check my repos for my current dotfiles.
+
+This archived state is a snapshot of the repo as it was when I last used it. It is not maintained anymore.
+
+Last used version of OSX Monterey was 12.7 (released on Sep 21, 2023)
+
+Original README.md follows below.
+
+---
+
 # dotfiles
 These are my dotfiles. There are many like them, but these ones are mine.
 
