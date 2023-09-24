@@ -82,6 +82,7 @@ alias veracrypt='/Applications/VeraCrypt.app/Contents/MacOS/Veracrypt'
 
 # git
 alias gst='clear && git status'
+alias gcm='git checkout main'
 
 # daito docker
 alias daitoapp='cd ~/Code/Daito/app'
